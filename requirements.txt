@@ -1,0 +1,8 @@
+# Runtime of the planners and the demo server: standard library only.
+# These packages are needed for the experiment analysis and the figures.
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+seaborn>=0.12
+scipy>=1.10        # paired significance tests (optional but recommended)
+pytest>=7.0        # running the test-suite

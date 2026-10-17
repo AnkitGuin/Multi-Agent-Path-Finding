@@ -1,0 +1,5 @@
+distribution,CBS,Independent,Prioritized
+clustered,0.6,0.0,1.0
+far,0.4,0.0,1.0
+near,1.0,0.3,1.0
+uniform,0.7,0.0,1.0

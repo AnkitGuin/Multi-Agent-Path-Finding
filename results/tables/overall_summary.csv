@@ -1,0 +1,4 @@
+,algorithm,n,success_rate,timeout_rate,failure_rate,runtime_mean,runtime_median,runtime_std,soc_mean,makespan_mean,soc_gap_mean,soc_gap_max,high_level_expansions_mean
+0,CBS,332,0.6536,0.3464,0.0,3.8598,0.2145,4.664,339.424,44.2166,0.0053,0.1099,544.0813
+1,Independent,332,0.0904,0.0,0.0,0.0282,0.0267,0.02,208.7,41.3667,0.0,0.0,0.0
+2,Prioritized,476,0.9454,0.0483,0.0063,0.1308,0.0377,0.3485,443.1422,45.5511,0.0421,0.7279,0.0

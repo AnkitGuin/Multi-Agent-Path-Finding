@@ -1,0 +1,98 @@
+{
+  "_comment": "Experimental design. Every suite is a cross-product of its factors; num_seeds instance repetitions per cell. time_limit is the per-run wall-clock budget (seconds).",
+  "time_limit_default": 10.0,
+  "suites": [
+    {
+      "name": "scalability",
+      "description": "Effect of the number of agents (32x32 random 20% maps, uniform start/goal placement).",
+      "algorithms": ["Independent", "Prioritized", "CBS"],
+      "num_seeds": 12,
+      "agent_counts": [5, 10, 15, 20, 25, 30, 40],
+      "densities": [0.2],
+      "structures": ["random"],
+      "distributions": ["uniform"],
+      "sizes": [[32, 32]],
+      "time_limit": 10.0
+    },
+    {
+      "name": "density",
+      "description": "Effect of obstacle density at two agent counts.",
+      "algorithms": ["Independent", "Prioritized", "CBS"],
+      "num_seeds": 8,
+      "agent_counts": [10, 20],
+      "densities": [0.0, 0.1, 0.2, 0.3, 0.4],
+      "structures": ["random"],
+      "distributions": ["uniform"],
+      "sizes": [[32, 32]],
+      "time_limit": 10.0
+    },
+    {
+      "name": "structure",
+      "description": "Effect of map topology (random / clustered blobs / rooms / maze).",
+      "algorithms": ["Independent", "Prioritized", "CBS"],
+      "num_seeds": 8,
+      "agent_counts": [10, 20],
+      "densities": [0.2],
+      "structures": ["random", "clusters", "rooms", "maze"],
+      "distributions": ["uniform"],
+      "sizes": [[32, 32]],
+      "time_limit": 10.0
+    },
+    {
+      "name": "distribution",
+      "description": "Effect of start/goal placement, i.e. of congestion (20 agents, 32x32, 20%).",
+      "algorithms": ["Independent", "Prioritized", "CBS"],
+      "num_seeds": 10,
+      "agent_counts": [20],
+      "densities": [0.2],
+      "structures": ["random"],
+      "distributions": ["uniform", "clustered", "near", "far"],
+      "sizes": [[32, 32]],
+      "time_limit": 10.0
+    },
+    {
+      "name": "gridsize",
+      "description": "Effect of map size at fixed density and agent count (agent density varies).",
+      "algorithms": ["Independent", "Prioritized", "CBS"],
+      "num_seeds": 8,
+      "agent_counts": [10, 20],
+      "densities": [0.2],
+      "structures": ["random"],
+      "distributions": ["uniform"],
+      "sizes": [[16, 16], [32, 32], [48, 48], [64, 64]],
+      "time_limit": 10.0
+    },
+    {
+      "name": "priority_orders",
+      "description": "Ablation over priority-ordering rules for Prioritized Planning (plus the restart variant).",
+      "algorithms": ["Prioritized", "Prioritized+restarts"],
+      "num_seeds": 8,
+      "agent_counts": [10, 20, 30],
+      "densities": [0.2],
+      "structures": ["random"],
+      "distributions": ["uniform"],
+      "sizes": [[32, 32]],
+      "priority_orders": [
+        "index",
+        "random",
+        "longest_first",
+        "shortest_first",
+        "most_conflicting_first",
+        "least_conflicting_first"
+      ],
+      "time_limit": 10.0
+    },
+    {
+      "name": "adaptive_holdout",
+      "description": "Mixed-conditions pool used to fit and evaluate the adaptive strategy selector (extension).",
+      "algorithms": ["Prioritized", "CBS"],
+      "num_seeds": 6,
+      "agent_counts": [10, 20, 30],
+      "densities": [0.1, 0.2, 0.3],
+      "structures": ["random"],
+      "distributions": ["uniform", "clustered"],
+      "sizes": [[32, 32]],
+      "time_limit": 10.0
+    }
+  ]
+}

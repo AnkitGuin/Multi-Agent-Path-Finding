@@ -1,0 +1,5 @@
+structure,CBS,Independent,Prioritized
+clusters,0.75,0.0625,1.0
+maze,0.0,0.0,0.25
+random,0.875,0.0625,1.0
+rooms,0.5625,0.0,0.9375

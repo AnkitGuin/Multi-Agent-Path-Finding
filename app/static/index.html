@@ -1,0 +1,576 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Multi-Agent Pathfinding — Coordination Strategies</title>
+<style>
+  :root {
+    --bg: #f6f7fb;
+    --panel: #ffffff;
+    --ink: #1d2330;
+    --muted: #6b7280;
+    --line: #e2e5ee;
+    --accent: #2a6f97;
+    --ok: #2a9d8f;
+    --warn: #e9c46a;
+    --bad: #e76f51;
+    --shadow: 0 1px 3px rgba(20, 25, 40, .09), 0 8px 24px rgba(20, 25, 40, .05);
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--ink);
+    font: 14px/1.45 ui-sans-serif, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  header {
+    padding: 14px 20px; background: var(--panel); border-bottom: 1px solid var(--line);
+    display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap;
+  }
+  header h1 { font-size: 17px; margin: 0; letter-spacing: -.2px; }
+  header p { margin: 0; color: var(--muted); font-size: 12.5px; }
+  .layout {
+    display: grid; gap: 14px; padding: 14px 20px 28px;
+    grid-template-columns: 285px minmax(360px, 1fr) 320px;
+    align-items: start;
+  }
+  @media (max-width: 1180px) { .layout { grid-template-columns: 1fr; } }
+  .panel {
+    background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+    padding: 14px; box-shadow: var(--shadow);
+  }
+  .panel + .panel { margin-top: 12px; }
+  h2 {
+    font-size: 11px; text-transform: uppercase; letter-spacing: .09em;
+    color: var(--muted); margin: 0 0 10px;
+  }
+  label { display: block; font-size: 12px; color: var(--muted); margin: 9px 0 3px; }
+  .row { display: flex; gap: 8px; }
+  .row > * { flex: 1; min-width: 0; }
+  input[type=number], input[type=text], select {
+    width: 100%; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px;
+    background: #fff; color: var(--ink); font: inherit; font-size: 13px;
+  }
+  input[type=range] { width: 100%; }
+  button {
+    padding: 7px 11px; border-radius: 6px; border: 1px solid var(--line);
+    background: #fff; color: var(--ink); font: inherit; font-size: 13px; cursor: pointer;
+  }
+  button:hover { border-color: #c9cfdd; background: #fbfcff; }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+  button.primary:hover { background: #22597c; }
+  button:disabled { opacity: .5; cursor: not-allowed; }
+  .btn-row { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+  .hint { font-size: 11.5px; color: var(--muted); margin-top: 8px; }
+  canvas { background: #fff; border-radius: 8px; display: block; margin: 0 auto; touch-action: none; }
+  .stage { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 12px; box-shadow: var(--shadow); }
+  .timeline { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
+  .timeline input[type=range] { flex: 1; min-width: 150px; }
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11.5px;
+    font-weight: 600; letter-spacing: .02em;
+  }
+  .badge.ok { background: #e2f5f1; color: #137a6d; }
+  .badge.bad { background: #fde8e2; color: #b8431f; }
+  .badge.warn { background: #fdf3d8; color: #8a6d1a; }
+  table { width: 100%; border-collapse: collapse; font-size: 12.5px; }
+  th, td { text-align: right; padding: 5px 6px; border-bottom: 1px solid var(--line); }
+  th:first-child, td:first-child { text-align: left; }
+  tbody tr { cursor: pointer; }
+  tbody tr:hover { background: #f4f8fd; }
+  tbody tr.active { background: #e8f1f9; }
+  .kv { display: flex; justify-content: space-between; gap: 10px; padding: 3px 0; font-size: 12.5px; }
+  .kv span:first-child { color: var(--muted); }
+  .kv span:last-child { font-variant-numeric: tabular-nums; font-weight: 600; }
+  .legend { display: flex; gap: 12px; flex-wrap: wrap; font-size: 11.5px; color: var(--muted); margin-top: 8px; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 4px; vertical-align: -1px; }
+  .note { font-size: 11.5px; color: var(--muted); border-left: 2px solid var(--line); padding-left: 8px; margin-top: 10px; }
+  .seg { display: flex; gap: 0; margin-top: 4px; }
+  .seg button { border-radius: 0; flex: 1; font-size: 12px; padding: 5px 4px; }
+  .seg button:first-child { border-radius: 6px 0 0 6px; }
+  .seg button:last-child { border-radius: 0 6px 6px 0; }
+  .seg button.on { background: var(--accent); border-color: var(--accent); color: #fff; }
+  #status { font-size: 12.5px; color: var(--muted); min-height: 18px; margin-top: 8px; }
+  .err { color: var(--bad); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Multi-Agent Pathfinding — An Empirical Study of Coordination Strategies</h1>
+  <p>Independent A* · Prioritized Planning · Conflict-Based Search</p>
+</header>
+
+<div class="layout">
+  <!-- ------------------------------------------------------------ controls -->
+  <div>
+    <div class="panel">
+      <h2>Environment</h2>
+      <div class="row">
+        <div><label>width<input type="number" id="width" value="32" min="5" max="120"></label></div>
+        <div><label>height<input type="number" id="height" value="32" min="5" max="120"></label></div>
+      </div>
+      <label>map structure
+        <select id="structure">
+          <option value="random">random (uniform obstacles)</option>
+          <option value="clusters">clusters (cave-like blobs)</option>
+          <option value="rooms">rooms (bottleneck doors)</option>
+          <option value="maze">maze (braided)</option>
+        </select>
+      </label>
+      <label>obstacle density <span id="densityLabel">0.20</span>
+        <input type="range" id="density" min="0" max="0.5" step="0.05" value="0.2">
+      </label>
+      <label>number of agents<input type="number" id="agents" value="12" min="1" max="200"></label>
+      <label>start / goal placement
+        <select id="distribution">
+          <option value="uniform">uniform (random)</option>
+          <option value="clustered">clustered (shared regions)</option>
+          <option value="near">near (goal close to start)</option>
+          <option value="far">far (long crossing paths)</option>
+        </select>
+      </label>
+      <div class="row">
+        <div><label>seed<input type="number" id="seed" value="1" min="0"></label></div>
+        <div style="display:flex;align-items:flex-end"><button id="randomSeed">shuffle</button></div>
+      </div>
+      <div class="btn-row">
+        <button class="primary" id="generate">Generate map</button>
+      </div>
+      <div class="hint" id="mapInfo"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Edit (click on the grid)</h2>
+      <div class="seg" id="editMode">
+        <button data-mode="none" class="on">off</button>
+        <button data-mode="obstacle">obstacle</button>
+        <button data-mode="start">start</button>
+        <button data-mode="goal">goal</button>
+      </div>
+      <div class="hint" id="editHint">Editing is off.</div>
+    </div>
+
+    <div class="panel">
+      <h2>Planner</h2>
+      <label>algorithm
+        <select id="algorithm">
+          <option value="CBS">CBS (optimal)</option>
+          <option value="Prioritized">Prioritized Planning</option>
+          <option value="Independent">Independent A* (baseline)</option>
+          <option value="Prioritized+restarts">Prioritized + restarts</option>
+        </select>
+      </label>
+      <label id="orderLabel" style="display:none">priority order
+        <select id="order">
+          <option value="index">index (as generated)</option>
+          <option value="random">random</option>
+          <option value="longest_first">longest path first</option>
+          <option value="shortest_first">shortest path first</option>
+          <option value="most_conflicting_first">most conflicting first</option>
+          <option value="least_conflicting_first">least conflicting first</option>
+        </select>
+      </label>
+      <label>time limit (s)<input type="number" id="timeLimit" value="5" min="1" max="60"></label>
+      <div class="btn-row">
+        <button class="primary" id="run">Run planner</button>
+        <button id="compare">Compare all</button>
+      </div>
+      <div id="status"></div>
+    </div>
+  </div>
+
+  <!-- ------------------------------------------------------------- stage -->
+  <div>
+    <div class="stage">
+      <canvas id="grid" width="720" height="720"></canvas>
+      <div class="timeline">
+        <button id="prev" title="Previous timestep">◀</button>
+        <button id="play" class="primary">▶ Play</button>
+        <button id="next" title="Next timestep">▶</button>
+        <input type="range" id="timeSlider" min="0" max="0" value="0" step="1">
+        <span id="timeLabel" style="font-variant-numeric:tabular-nums;min-width:74px">t = 0 / 0</span>
+        <label style="margin:0">speed<input type="range" id="speed" min="1" max="30" value="8" style="width:90px"></label>
+      </div>
+      <div class="legend">
+        <span><i style="background:#2b2b3c"></i>obstacle</span>
+        <span><i style="background:#fff;border:1px solid #c9cfdd"></i>free</span>
+        <span><i style="background:#2a9d8f;border-radius:50%"></i>start</span>
+        <span><i style="background:#e76f51"></i>goal</span>
+        <span><i style="background:#e63946"></i>conflict at this timestep</span>
+      </div>
+    </div>
+    <div class="panel">
+      <h2>Algorithm comparison (same instance)</h2>
+      <table id="cmpTable">
+        <thead><tr><th>algorithm</th><th>status</th><th>time (s)</th><th>SOC</th><th>makespan</th><th>conflicts</th></tr></thead>
+        <tbody><tr><td colspan="6" style="text-align:center;color:#6b7280">Run “Compare all” to fill this table.</td></tr></tbody>
+      </table>
+      <div class="note" id="cmpNote">
+        SOC = sum of individual path costs (lower is better). SIC = sum of individually optimal
+        costs, a lower bound on the optimal SOC: it is reported next to each result so you can see
+        how much coordination costs.
+      </div>
+    </div>
+  </div>
+
+  <!-- -------------------------------------------------------------- stats -->
+  <div>
+    <div class="panel">
+      <h2>Result</h2>
+      <div id="resultHead" style="margin-bottom:8px"><span class="badge warn">no run yet</span></div>
+      <div class="kv"><span>planning time</span><span id="s_time">–</span></div>
+      <div class="kv"><span>sum of costs (SOC)</span><span id="s_soc">–</span></div>
+      <div class="kv"><span>makespan</span><span id="s_makespan">–</span></div>
+      <div class="kv"><span>SIC (lower bound)</span><span id="s_sic">–</span></div>
+      <div class="kv"><span>SOC excess over SIC</span><span id="s_gap">–</span></div>
+      <div class="kv"><span>conflicts (independent plan)</span><span id="s_ci">–</span></div>
+      <div class="kv"><span>conflicts remaining</span><span id="s_cf">–</span></div>
+      <div class="kv"><span>CBS high-level expansions</span><span id="s_hl">–</span></div>
+      <div class="kv"><span>low-level A* calls</span><span id="s_ll">–</span></div>
+      <div class="hint" id="s_details"></div>
+    </div>
+    <div class="panel">
+      <h2>Reading the demo</h2>
+      <div class="note">
+        <b>Independent A*</b> ignores other agents — watch the red flashes: every flash is a
+        collision the fleet would actually suffer. That is the coordination burden an instance
+        imposes.
+      </div>
+      <div class="note">
+        <b>Prioritized Planning</b> plans agents one after another against a space-time
+        reservation table. It is fast, but a later agent is never allowed to displace an earlier
+        one, so it can fail even when a solution exists — and its routes can be visibly longer.
+      </div>
+      <div class="note">
+        <b>CBS</b> starts from the independent plan and resolves one conflict at a time by
+        branching on constraints, so it returns a provably conflict-free (SOC-optimal) plan — at
+        a computational cost that grows steeply with the number of agents.
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+"use strict";
+
+const state = {
+  grid: { width: 32, height: 32, rows: [] },
+  starts: [], goals: [],
+  results: [],            // last /api/solve response
+  active: null,           // index into state.results
+  t: 0, horizon: 0,
+  playing: false, speed: 8,
+  editMode: "none", editIndex: 0,
+  paths: [], conflicts: [],
+  sic: null, busiestatus: ""
+};
+
+const $ = (id) => document.getElementById(id);
+const canvas = $("grid");
+const ctx = canvas.getContext("2d");
+
+/* ------------------------------------------------------------------ helpers */
+const agentColor = (i) => `hsl(${(i * 137.508) % 360}, 62%, 45%)`;
+const fmt = (v, d = 3) => (v === null || v === undefined ? "–" : Number(v).toFixed(d));
+
+function setStatus(msg, isError) {
+  const el = $("status");
+  el.textContent = msg || "";
+  el.className = isError ? "err" : "";
+}
+
+async function api(path, payload) {
+  const response = await fetch(path, {
+    method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload)
+  });
+  const data = await response.json();
+  if (!response.ok) throw new Error(data.error || ("HTTP " + response.status));
+  return data;
+}
+
+/* --------------------------------------------------------------- generation */
+async function generate() {
+  setStatus("Generating map…");
+  try {
+    const data = await api("/api/generate", {
+      width: +$("width").value, height: +$("height").value,
+      structure: $("structure").value, obstacle_density: +$("density").value,
+      num_agents: +$("agents").value, distribution: $("distribution").value,
+      seed: +$("seed").value
+    });
+    state.grid = data.grid; state.starts = data.starts; state.goals = data.goals;
+    state.results = []; state.paths = []; state.conflicts = []; state.active = null;
+    state.sic = null; state.t = 0; state.horizon = 0; stop();
+    renderStats(null); renderTable([]); draw();
+    $("mapInfo").textContent =
+      `${data.grid.width}×${data.grid.height}, measured obstacle density ${data.obstacle_density_measured}, ` +
+      `${data.starts.length} agents, ${data.features.mean_start_goal_manhattan.toFixed(1)} mean |start−goal| distance`;
+    setStatus("");
+  } catch (err) { setStatus("generate failed: " + err.message, true); }
+}
+
+/* ------------------------------------------------------------------ solving */
+async function solve(algorithms) {
+  const timeLimit = +$("timeLimit").value;
+  setStatus("Running " + algorithms.join(", ") + "…");
+  $("run").disabled = true; $("compare").disabled = true;
+  try {
+    const data = await api("/api/solve", {
+      grid: state.grid, starts: state.starts, goals: state.goals,
+      algorithms: algorithms, time_limit: timeLimit,
+      priority_order: $("order").value
+    });
+    state.results = data.results; state.sic = data.sic;
+    if (data.problems && data.problems.length) setStatus("instance problem: " + data.problems[0], true);
+    else setStatus("");
+    // Prefer a successful plan; otherwise show whatever came back.
+    let idx = data.results.findIndex(r => r.success);
+    if (idx < 0) idx = 0;
+    selectResult(idx);
+    renderTable(data.results);
+  } catch (err) {
+    setStatus("solve failed: " + err.message, true);
+  } finally {
+    $("run").disabled = false; $("compare").disabled = false;
+  }
+}
+
+function selectResult(idx) {
+  const r = state.results[idx];
+  if (!r) return;
+  state.active = idx;
+  state.paths = r.paths || [];
+  state.conflicts = r.conflict_events || [];
+  state.horizon = state.paths.length ? Math.max(...state.paths.map(p => p.length - 1)) : 0;
+  state.t = 0;
+  $("timeSlider").max = state.horizon;
+  $("timeSlider").value = 0;
+  renderStats(r);
+  highlightTable();
+  draw();
+}
+
+/* --------------------------------------------------------------- rendering */
+function draw() {
+  const { width: w, height: h, rows } = state.grid;
+  if (!rows.length) return;
+  const maxPixels = Math.min(canvas.parentElement.clientWidth - 24, 760);
+  const cell = Math.max(4, Math.floor(Math.min(maxPixels / w, maxPixels / h)));
+  canvas.width = cell * w; canvas.height = cell * h;
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  // cells
+  for (let y = 0; y < h; y++) {
+    for (let x = 0; x < w; x++) {
+      if (rows[y][x] !== ".") {
+        ctx.fillStyle = "#2b2b3c";
+        ctx.fillRect(x * cell, y * cell, cell, cell);
+      }
+    }
+  }
+  // grid lines
+  ctx.strokeStyle = "#eef0f5"; ctx.lineWidth = 1;
+  for (let x = 0; x <= w; x++) { ctx.beginPath(); ctx.moveTo(x * cell + .5, 0); ctx.lineTo(x * cell + .5, h * cell); ctx.stroke(); }
+  for (let y = 0; y <= h; y++) { ctx.beginPath(); ctx.moveTo(0, y * cell + .5); ctx.lineTo(w * cell, y * cell + .5); ctx.stroke(); }
+
+  // goal markers (behind everything)
+  state.goals.forEach((g, i) => {
+    ctx.strokeStyle = agentColor(i); ctx.lineWidth = 1.6;
+    ctx.strokeRect(g[0] * cell + cell * .22, g[1] * cell + cell * .22, cell * .56, cell * .56);
+  });
+  // start markers
+  state.starts.forEach((s, i) => {
+    ctx.strokeStyle = agentColor(i); ctx.lineWidth = 1.4;
+    ctx.beginPath();
+    ctx.arc(s[0] * cell + cell / 2, s[1] * cell + cell / 2, cell * .34, 0, Math.PI * 2);
+    ctx.stroke();
+  });
+
+  // paths
+  state.paths.forEach((path, i) => {
+    if (path.length < 2) return;
+    ctx.strokeStyle = agentColor(i); ctx.globalAlpha = .5; ctx.lineWidth = Math.max(1.2, cell * .12);
+    ctx.beginPath();
+    ctx.moveTo(path[0][0] * cell + cell / 2, path[0][1] * cell + cell / 2);
+    for (let k = 1; k < path.length; k++)
+      ctx.lineTo(path[k][0] * cell + cell / 2, path[k][1] * cell + cell / 2);
+    ctx.stroke(); ctx.globalAlpha = 1;
+  });
+
+  // conflicts at the current timestep
+  state.conflicts.filter(c => c.t === state.t).forEach(c => {
+    ctx.fillStyle = "rgba(230,57,70,.30)";
+    ctx.fillRect(c.cell[0] * cell, c.cell[1] * cell, cell, cell);
+    ctx.strokeStyle = "#e63946"; ctx.lineWidth = 2;
+    ctx.strokeRect(c.cell[0] * cell + 1, c.cell[1] * cell + 1, cell - 2, cell - 2);
+  });
+
+  // agents
+  state.paths.forEach((path, i) => {
+    const cellPos = path[Math.min(state.t, path.length - 1)];
+    const cx = cellPos[0] * cell + cell / 2, cy = cellPos[1] * cell + cell / 2;
+    ctx.fillStyle = agentColor(i);
+    ctx.beginPath(); ctx.arc(cx, cy, cell * .34, 0, Math.PI * 2); ctx.fill();
+    ctx.strokeStyle = "rgba(255,255,255,.85)"; ctx.lineWidth = 1; ctx.stroke();
+    if (cell >= 15) {
+      ctx.fillStyle = "#fff"; ctx.font = `${Math.max(8, Math.floor(cell * .34))}px ui-sans-serif`;
+      ctx.textAlign = "center"; ctx.textBaseline = "middle";
+      ctx.fillText(String(i), cx, cy + .5);
+    }
+  });
+  $("timeLabel").textContent = `t = ${state.t} / ${state.horizon}`;
+}
+
+/* ------------------------------------------------------------------- panels */
+function renderStats(r) {
+  const head = $("resultHead");
+  if (!r) {
+    head.innerHTML = '<span class="badge warn">no run yet</span>';
+    ["s_time","s_soc","s_makespan","s_sic","s_gap","s_ci","s_cf","s_hl","s_ll"]
+      .forEach(id => $(id).textContent = "–");
+    $("s_details").textContent = "";
+    return;
+  }
+  const ok = r.success;
+  head.innerHTML =
+    `<b>${r.algorithm}</b> ` +
+    `<span class="badge ${ok ? "ok" : (r.status === "timeout" ? "warn" : "bad")}">${r.status}</span>`;
+  $("s_time").textContent = fmt(r.runtime_sec, 4) + " s";
+  $("s_soc").textContent = r.soc === null ? "–" : r.soc;
+  $("s_makespan").textContent = r.makespan === null ? "–" : r.makespan;
+  $("s_sic").textContent = r.sic === null ? "–" : r.sic;
+  $("s_gap").textContent = r.soc_gap === null ? "–" : (r.soc_gap * 100).toFixed(2) + " %";
+  $("s_ci").textContent = r.conflicts_initial === null ? "–" : r.conflicts_initial;
+  $("s_cf").textContent = r.conflicts_final;
+  $("s_hl").textContent = r.high_level_expansions ?? "–";
+  $("s_ll").textContent = r.low_level_calls ?? "–";
+  const extra = [];
+  if (r.priority_order) extra.push("priority order: " + r.priority_order.join(","));
+  if (r.details && r.details.reason) extra.push(r.details.reason);
+  if (!ok && r.status === "conflict")
+    extra.push("the returned plan collides — this baseline does no coordination");
+  if (r.soc_gap === 0) extra.push("SOC equals the SIC lower bound: this plan is optimal");
+  $("s_details").textContent = extra.join(" · ");
+}
+
+function renderTable(results) {
+  const body = $("cmpTable").querySelector("tbody");
+  if (!results.length) {
+    body.innerHTML = '<tr><td colspan="6" style="text-align:center;color:#6b7280">Run “Compare all” to fill this table.</td></tr>';
+    return;
+  }
+  body.innerHTML = results.map((r, i) => `
+    <tr data-index="${i}">
+      <td>${r.algorithm}</td>
+      <td><span class="badge ${r.success ? "ok" : (r.status === "timeout" ? "warn" : "bad")}">${r.status}</span></td>
+      <td>${fmt(r.runtime_sec, 3)}</td>
+      <td>${r.soc === null ? "–" : r.soc}</td>
+      <td>${r.makespan === null ? "–" : r.makespan}</td>
+      <td>${r.conflicts_final}</td>
+    </tr>`).join("");
+  body.querySelectorAll("tr").forEach(tr =>
+    tr.addEventListener("click", () => selectResult(+tr.dataset.index)));
+  highlightTable();
+}
+
+function highlightTable() {
+  document.querySelectorAll("#cmpTable tbody tr").forEach(tr =>
+    tr.classList.toggle("active", +tr.dataset.index === state.active));
+}
+
+/* --------------------------------------------------------------- animation */
+let timer = null;
+function play() {
+  if (state.horizon === 0) return;
+  state.playing = true; $("play").textContent = "❚❚ Pause";
+  const tick = () => {
+    if (state.t >= state.horizon) {
+      state.t = 0; $("timeSlider").value = 0; draw();
+    } else {
+      state.t += 1; $("timeSlider").value = state.t; draw();
+    }
+    timer = setTimeout(tick, 1000 / state.speed);
+  };
+  timer = setTimeout(tick, 1000 / state.speed);
+}
+function stop() {
+  state.playing = false; $("play").textContent = "▶ Play";
+  if (timer) { clearTimeout(timer); timer = null; }
+}
+
+/* ----------------------------------------------------------------- editing */
+function canvasCell(evt) {
+  const rect = canvas.getBoundingClientRect();
+  const cell = canvas.width / state.grid.width;
+  const x = Math.floor((evt.clientX - rect.left) * (canvas.width / rect.width) / cell);
+  const y = Math.floor((evt.clientY - rect.top) * (canvas.height / rect.height) / cell);
+  if (x < 0 || y < 0 || x >= state.grid.width || y >= state.grid.height) return null;
+  return [x, y];
+}
+function applyEdit(evt) {
+  const cellPos = canvasCell(evt);
+  if (!cellPos || state.editMode === "none") return;
+  const [x, y] = cellPos;
+  if (state.editMode === "obstacle") {
+    const row = state.grid.rows[y];
+    state.grid.rows[y] = row.substring(0, x) + (row[x] === "." ? "@" : ".") + row.substring(x + 1);
+  } else {
+    if (state.grid.rows[y][x] !== ".") { setStatus("that cell is blocked", true); return; }
+    const target = state.editMode === "start" ? state.starts : state.goals;
+    const other = state.editMode === "start" ? state.goals : state.starts;
+    if (other.some(c => c[0] === x && c[1] === y)) { setStatus("cell already used", true); return; }
+    target[state.editIndex % target.length] = [x, y];
+    state.editIndex = (state.editIndex + 1) % target.length;
+    setStatus(`${state.editMode} of agent ${(state.editIndex - 1 + target.length) % target.length} set to (${x},${y})`);
+  }
+  state.paths = []; state.conflicts = []; state.results = []; state.active = null;
+  renderStats(null); renderTable([]);
+  draw();
+}
+
+/* ------------------------------------------------------------------- setup */
+function bind() {
+  $("generate").addEventListener("click", generate);
+  $("randomSeed").addEventListener("click", () => {
+    $("seed").value = Math.floor(Math.random() * 100000);
+    generate();
+  });
+  $("run").addEventListener("click", () => solve([$("algorithm").value]));
+  $("compare").addEventListener("click", () =>
+    solve(["Independent", "Prioritized", "CBS", "Prioritized+restarts"]));
+  $("density").addEventListener("input", e => $("densityLabel").textContent = (+e.target.value).toFixed(2));
+  $("algorithm").addEventListener("change", e =>
+    $("orderLabel").style.display = e.target.value === "Prioritized" ? "" : "none");
+  $("algorithm").dispatchEvent(new Event("change"));
+
+  $("play").addEventListener("click", () => state.playing ? stop() : play());
+  $("next").addEventListener("click", () => { stop(); state.t = Math.min(state.horizon, state.t + 1); $("timeSlider").value = state.t; draw(); });
+  $("prev").addEventListener("click", () => { stop(); state.t = Math.max(0, state.t - 1); $("timeSlider").value = state.t; draw(); });
+  $("timeSlider").addEventListener("input", e => { stop(); state.t = +e.target.value; draw(); });
+  $("speed").addEventListener("input", e => { state.speed = +e.target.value; if (state.playing) { stop(); play(); } });
+
+  $("editMode").addEventListener("click", e => {
+    const btn = e.target.closest("button"); if (!btn) return;
+    state.editMode = btn.dataset.mode;
+    $("editMode").querySelectorAll("button").forEach(b => b.classList.toggle("on", b === btn));
+    $("editHint").textContent = {
+      none: "Editing is off.",
+      obstacle: "Click a cell to toggle an obstacle.",
+      start: "Click a cell to place the next agent's start.",
+      goal: "Click a cell to place the next agent's goal."
+    }[state.editMode];
+  });
+  canvas.addEventListener("click", applyEdit);
+  window.addEventListener("resize", draw);
+  window.addEventListener("keydown", e => {
+    if (e.key === " ") { e.preventDefault(); state.playing ? stop() : play(); }
+    if (e.key === "ArrowRight") $("next").click();
+    if (e.key === "ArrowLeft") $("prev").click();
+  });
+}
+
+bind();
+generate();
+</script>
+</body>
+</html>

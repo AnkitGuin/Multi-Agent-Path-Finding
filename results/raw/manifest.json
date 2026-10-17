@@ -1,0 +1,342 @@
+{
+  "environment": {
+    "python": "3.13.16",
+    "platform": "Linux-6.1.158+-x86_64-with-glibc2.41",
+    "processor": "",
+    "timestamp": "2026-10-17 08:21:54"
+  },
+  "suites": [
+    {
+      "name": "scalability",
+      "algorithms": [
+        "Independent",
+        "Prioritized",
+        "CBS"
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "agent_counts": [
+        5,
+        10,
+        15,
+        20,
+        25,
+        30,
+        40
+      ],
+      "densities": [
+        0.2
+      ],
+      "structures": [
+        "random"
+      ],
+      "distributions": [
+        "uniform"
+      ],
+      "sizes": [
+        [
+          32,
+          32
+        ]
+      ],
+      "priority_orders": [
+        "index"
+      ],
+      "time_limit": 10.0,
+      "description": "Effect of the number of agents (32x32 random 20% maps, uniform start/goal placement)."
+    },
+    {
+      "name": "density",
+      "algorithms": [
+        "Independent",
+        "Prioritized",
+        "CBS"
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "agent_counts": [
+        10,
+        20
+      ],
+      "densities": [
+        0.0,
+        0.1,
+        0.2,
+        0.3,
+        0.4
+      ],
+      "structures": [
+        "random"
+      ],
+      "distributions": [
+        "uniform"
+      ],
+      "sizes": [
+        [
+          32,
+          32
+        ]
+      ],
+      "priority_orders": [
+        "index"
+      ],
+      "time_limit": 10.0,
+      "description": "Effect of obstacle density at two agent counts."
+    },
+    {
+      "name": "structure",
+      "algorithms": [
+        "Independent",
+        "Prioritized",
+        "CBS"
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "agent_counts": [
+        10,
+        20
+      ],
+      "densities": [
+        0.2
+      ],
+      "structures": [
+        "random",
+        "clusters",
+        "rooms",
+        "maze"
+      ],
+      "distributions": [
+        "uniform"
+      ],
+      "sizes": [
+        [
+          32,
+          32
+        ]
+      ],
+      "priority_orders": [
+        "index"
+      ],
+      "time_limit": 10.0,
+      "description": "Effect of map topology (random / clustered blobs / rooms / maze)."
+    },
+    {
+      "name": "distribution",
+      "algorithms": [
+        "Independent",
+        "Prioritized",
+        "CBS"
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "agent_counts": [
+        20
+      ],
+      "densities": [
+        0.2
+      ],
+      "structures": [
+        "random"
+      ],
+      "distributions": [
+        "uniform",
+        "clustered",
+        "near",
+        "far"
+      ],
+      "sizes": [
+        [
+          32,
+          32
+        ]
+      ],
+      "priority_orders": [
+        "index"
+      ],
+      "time_limit": 10.0,
+      "description": "Effect of start/goal placement, i.e. of congestion (20 agents, 32x32, 20%)."
+    },
+    {
+      "name": "gridsize",
+      "algorithms": [
+        "Independent",
+        "Prioritized",
+        "CBS"
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "agent_counts": [
+        10,
+        20
+      ],
+      "densities": [
+        0.2
+      ],
+      "structures": [
+        "random"
+      ],
+      "distributions": [
+        "uniform"
+      ],
+      "sizes": [
+        [
+          16,
+          16
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          48,
+          48
+        ],
+        [
+          64,
+          64
+        ]
+      ],
+      "priority_orders": [
+        "index"
+      ],
+      "time_limit": 10.0,
+      "description": "Effect of map size at fixed density and agent count (agent density varies)."
+    },
+    {
+      "name": "priority_orders",
+      "algorithms": [
+        "Prioritized",
+        "Prioritized+restarts"
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "agent_counts": [
+        10,
+        20,
+        30
+      ],
+      "densities": [
+        0.2
+      ],
+      "structures": [
+        "random"
+      ],
+      "distributions": [
+        "uniform"
+      ],
+      "sizes": [
+        [
+          32,
+          32
+        ]
+      ],
+      "priority_orders": [
+        "index",
+        "random",
+        "longest_first",
+        "shortest_first",
+        "most_conflicting_first",
+        "least_conflicting_first"
+      ],
+      "time_limit": 10.0,
+      "description": "Ablation over priority-ordering rules for Prioritized Planning (plus the restart variant)."
+    },
+    {
+      "name": "adaptive_holdout",
+      "algorithms": [
+        "Prioritized",
+        "CBS"
+      ],
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "agent_counts": [
+        10,
+        20,
+        30
+      ],
+      "densities": [
+        0.1,
+        0.2,
+        0.3
+      ],
+      "structures": [
+        "random"
+      ],
+      "distributions": [
+        "uniform",
+        "clustered"
+      ],
+      "sizes": [
+        [
+          32,
+          32
+        ]
+      ],
+      "priority_orders": [
+        "index"
+      ],
+      "time_limit": 10.0,
+      "description": "Mixed-conditions pool used to fit and evaluate the adaptive strategy selector (extension)."
+    }
+  ]
+}
