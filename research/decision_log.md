@@ -57,3 +57,10 @@ in the original main suites. Within-pool CV still separates train/test indices;
 do not misreport this overlap as proven CV leakage. Reserve disjoint future
 seeds and layouts before method tuning; final distributions/layout licenses
 remain unresolved and no holdout has been run.
+
+## 2026-11-16 — Verify committed code from a separate checkout
+
+Committed foundation as abb7170, then checked it in a detached clean worktree
+using the pinned existing environment. All 197 tests passed in 2.49 s; six
+analytic replays and six figures regenerated. Added clean-checkout XML/report
+as a documentation-only follow-up. The full research roadmap remains incomplete.
