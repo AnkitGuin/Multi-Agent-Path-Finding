@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "status": "reserved_not_executed_not_publication_ready",
+  "seeds": {"start": 100000, "stop_exclusive": 100100},
+  "families": ["warehouse_reserved", "MovingAI_layouts_to_license_and_hash"],
+  "agent_counts": [5, 10, 20, 40, 80],
+  "sensor_radii": [1, 3, 5],
+  "packet_loss": [0.0, 0.05, 0.2],
+  "latency": "none_uniform_and_heavy_tail_to_freeze_after_development",
+  "required_before_execution": ["G1_review", "G3_baselines", "licensed_layout_hashes", "fully_resolved_config"]
+}

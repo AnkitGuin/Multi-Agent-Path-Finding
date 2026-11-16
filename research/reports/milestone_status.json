@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "client_date": "2026-11-16",
+  "base_revision": "c4d073d32ec428411d26ca51459915ebca2645b2",
+  "branch": "research/decentralized-async-mapf",
+  "whole_roadmap_complete": false,
+  "first_session_deliverables_present": true,
+  "original_tests": {"collected": 114, "passed": 111, "failed": 3},
+  "final_tests": {"passed": 197, "failed": 0, "skipped": 0},
+  "analytic_replays_verified": 6,
+  "primary_source_records": 15,
+  "full_systematic_literature_review_complete": false,
+  "bounded_baseline_jobs_before_fix": 24,
+  "bounded_baseline_jobs_after_fix": 24,
+  "full_historical_tables_recertified": false,
+  "proposed_method_implemented": false,
+  "strong_local_baselines_reproduced": false,
+  "holdout_executed": false,
+  "manuscript_started": false,
+  "next_gate": "G1: full closest-paper/code review and author assessment; M4: authentic baselines",
+  "evidence": [
+    "research/reports/original_tests.xml",
+    "research/reports/final_tests.xml",
+    "research/reports/audit_summary.json",
+    "results/async/validation_final/manifest.json",
+    "research/literature/source_review_manifest.json"
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "adaptive_instances": 108,
+  "adaptive_overlap_by_suite": {
+    "scalability": 18,
+    "density": 36,
+    "structure": 12,
+    "distribution": 12,
+    "gridsize": 12,
+    "priority_orders": 18
+  },
+  "adaptive_overlap_union": 48,
+  "identity_columns": [
+    "seed",
+    "width",
+    "height",
+    "structure",
+    "obstacle_density",
+    "distribution",
+    "num_agents"
+  ],
+  "holdout_spec_sha256": "b4c1dd7e93685e5ddff51b38e590f2b612bbe52e007900345f3d86c46c6fe41d",
+  "baseline": {
+    "rows": 24,
+    "statuses": {
+      "conflict": 4,
+      "ok": 17,
+      "invalid": 3
+    }
+  },
+  "repaired_baseline": {
+    "rows": 24,
+    "statuses": {
+      "conflict": 4,
+      "ok": 20
+    }
+  },
+  "repaired_historical_status_soc_matches": 24,
+  "original_tests": {
+    "tests": 114.0,
+    "failures": 3.0,
+    "errors": 0.0,
+    "skipped": 0.0,
+    "time": 1.432
+  },
+  "repaired_legacy_tests": {
+    "tests": 115.0,
+    "failures": 0.0,
+    "errors": 0.0,
+    "skipped": 0.0,
+    "time": 1.073
+  },
+  "final_tests": {
+    "tests": 197.0,
+    "failures": 0.0,
+    "errors": 0.0,
+    "skipped": 0.0,
+    "time": 1.729
+  }
+}
