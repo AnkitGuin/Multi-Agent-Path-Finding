@@ -1,0 +1,1296 @@
+{
+  "schema_version": 1,
+  "model": "duration_resources_v0.2.1",
+  "scenario_hash": "832ac658b90cc0540afc3ba3c2478784ec7b932a2eb392195aa1e0705136d1ed",
+  "config_hash": "0f3735ab964e5875f690fc58a50007aec3cce813798a1941254f559273064f51",
+  "termination_reason": "success",
+  "error": null,
+  "completed_agents": 2,
+  "completion_fraction": 1.0,
+  "agent_count": 2,
+  "elapsed_time": 3.0,
+  "makespan": 3.0,
+  "executed_distance_soc": 2.0,
+  "executed_time_soc": 6.0,
+  "censored": false,
+  "total_wait_time": 4.0,
+  "per_agent_wait": [
+    2.0,
+    2.0
+  ],
+  "per_agent_arrival": [
+    3.0,
+    3.0
+  ],
+  "per_agent_distance": [
+    1.0,
+    1.0
+  ],
+  "decisions": 6,
+  "unsafe_move_attempts": 0,
+  "collision_count": 0,
+  "collisions": [],
+  "deadlock_flag": null,
+  "planning_cpu_seconds": 0.0,
+  "sim_wall_seconds": 0.0015032999799586833,
+  "messages_sent": 6,
+  "messages_delivered": 3,
+  "bytes_sent": 3068,
+  "bytes_delivered": 1520,
+  "method": "scripted_validation_fixture",
+  "oracle_access": true,
+  "replan_count": 0,
+  "peak_memory": null,
+  "events": [
+    {
+      "time": 0,
+      "cycle": 0,
+      "phase": 2,
+      "sequence": 0,
+      "kind": "SENSE",
+      "payload": 0
+    },
+    {
+      "time": 0,
+      "cycle": 0,
+      "phase": 2,
+      "sequence": 1,
+      "kind": "SENSE",
+      "payload": 1
+    },
+    {
+      "time": 0,
+      "cycle": 0,
+      "phase": 3,
+      "sequence": 3,
+      "kind": "DECIDE",
+      "payload": {
+        "ego_id": 0,
+        "event_time": 0,
+        "ego_pose": [
+          0,
+          0
+        ],
+        "visible_cells": [
+          {
+            "cell": [
+              0,
+              0
+            ],
+            "state": "free",
+            "observed_at": 0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              1,
+              0
+            ],
+            "state": "free",
+            "observed_at": 0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              2,
+              0
+            ],
+            "state": "free",
+            "observed_at": 0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              0,
+              1
+            ],
+            "state": "free",
+            "observed_at": 0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              1,
+              1
+            ],
+            "state": "free",
+            "observed_at": 0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              2,
+              1
+            ],
+            "state": "free",
+            "observed_at": 0,
+            "origin": 0
+          }
+        ],
+        "visible_agents": [
+          {
+            "agent_id": 1,
+            "occupied_cells": [
+              [
+                2,
+                0
+              ]
+            ],
+            "moving": false
+          }
+        ],
+        "sensor_radius": 3,
+        "occlusion_model": "none"
+      }
+    },
+    {
+      "time": 0,
+      "kind": "DECISION",
+      "agent": 0,
+      "decision": {
+        "action_kind": "wait",
+        "next_vertex": [
+          0,
+          0
+        ],
+        "messages": [
+          {
+            "recipient": 1,
+            "kind": "MAP",
+            "payload_json": "{\"cells\": [{\"cell\": [0, 0], \"state\": \"free\", \"observed_at\": 0, \"origin\": 0}, {\"cell\": [1, 0], \"state\": \"free\", \"observed_at\": 0, \"origin\": 0}, {\"cell\": [2, 0], \"state\": \"free\", \"observed_at\": 0, \"origin\": 0}, {\"cell\": [0, 1], \"state\": \"free\", \"observed_at\": 0, \"origin\": 0}, {\"cell\": [1, 1], \"state\": \"free\", \"observed_at\": 0, \"origin\": 0}, {\"cell\": [2, 1], \"state\": \"free\", \"observed_at\": 0, \"origin\": 0}]}"
+          }
+        ]
+      }
+    },
+    {
+      "time": 0,
+      "kind": "ACTION_START",
+      "action": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 0,
+        "end_time": 1.0,
+        "action_id": 0
+      }
+    },
+    {
+      "time": 0,
+      "cycle": 0,
+      "phase": 3,
+      "sequence": 4,
+      "kind": "DECIDE",
+      "payload": {
+        "ego_id": 1,
+        "event_time": 0,
+        "ego_pose": [
+          2,
+          0
+        ],
+        "visible_cells": [
+          {
+            "cell": [
+              0,
+              0
+            ],
+            "state": "free",
+            "observed_at": 0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              1,
+              0
+            ],
+            "state": "free",
+            "observed_at": 0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              2,
+              0
+            ],
+            "state": "free",
+            "observed_at": 0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              0,
+              1
+            ],
+            "state": "free",
+            "observed_at": 0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              1,
+              1
+            ],
+            "state": "free",
+            "observed_at": 0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              2,
+              1
+            ],
+            "state": "free",
+            "observed_at": 0,
+            "origin": 1
+          }
+        ],
+        "visible_agents": [
+          {
+            "agent_id": 0,
+            "occupied_cells": [
+              [
+                0,
+                0
+              ]
+            ],
+            "moving": false
+          }
+        ],
+        "sensor_radius": 3,
+        "occlusion_model": "none"
+      }
+    },
+    {
+      "time": 0,
+      "kind": "DECISION",
+      "agent": 1,
+      "decision": {
+        "action_kind": "wait",
+        "next_vertex": [
+          2,
+          0
+        ],
+        "messages": [
+          {
+            "recipient": 0,
+            "kind": "MAP",
+            "payload_json": "{\"cells\": [{\"cell\": [0, 0], \"state\": \"free\", \"observed_at\": 0, \"origin\": 1}, {\"cell\": [1, 0], \"state\": \"free\", \"observed_at\": 0, \"origin\": 1}, {\"cell\": [2, 0], \"state\": \"free\", \"observed_at\": 0, \"origin\": 1}, {\"cell\": [0, 1], \"state\": \"free\", \"observed_at\": 0, \"origin\": 1}, {\"cell\": [1, 1], \"state\": \"free\", \"observed_at\": 0, \"origin\": 1}, {\"cell\": [2, 1], \"state\": \"free\", \"observed_at\": 0, \"origin\": 1}]}"
+          }
+        ]
+      }
+    },
+    {
+      "time": 0,
+      "kind": "ACTION_START",
+      "action": {
+        "agent_id": 1,
+        "source": [
+          2,
+          0
+        ],
+        "target": [
+          2,
+          0
+        ],
+        "start_time": 0,
+        "end_time": 1.0,
+        "action_id": 1
+      }
+    },
+    {
+      "time": 1.0,
+      "cycle": 0,
+      "phase": 0,
+      "sequence": 7,
+      "kind": "ACTION_FINISH",
+      "payload": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 0,
+        "end_time": 1.0,
+        "action_id": 0
+      }
+    },
+    {
+      "time": 1.0,
+      "cycle": 0,
+      "phase": 0,
+      "sequence": 9,
+      "kind": "ACTION_FINISH",
+      "payload": {
+        "agent_id": 1,
+        "source": [
+          2,
+          0
+        ],
+        "target": [
+          2,
+          0
+        ],
+        "start_time": 0,
+        "end_time": 1.0,
+        "action_id": 1
+      }
+    },
+    {
+      "time": 1.0,
+      "cycle": 0,
+      "phase": 2,
+      "sequence": 10,
+      "kind": "SENSE",
+      "payload": 0
+    },
+    {
+      "time": 1.0,
+      "cycle": 0,
+      "phase": 2,
+      "sequence": 11,
+      "kind": "SENSE",
+      "payload": 1
+    },
+    {
+      "time": 1.0,
+      "cycle": 0,
+      "phase": 3,
+      "sequence": 12,
+      "kind": "DECIDE",
+      "payload": {
+        "ego_id": 0,
+        "event_time": 1.0,
+        "ego_pose": [
+          0,
+          0
+        ],
+        "visible_cells": [
+          {
+            "cell": [
+              0,
+              0
+            ],
+            "state": "free",
+            "observed_at": 1.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              1,
+              0
+            ],
+            "state": "free",
+            "observed_at": 1.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              2,
+              0
+            ],
+            "state": "free",
+            "observed_at": 1.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              0,
+              1
+            ],
+            "state": "free",
+            "observed_at": 1.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              1,
+              1
+            ],
+            "state": "free",
+            "observed_at": 1.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              2,
+              1
+            ],
+            "state": "free",
+            "observed_at": 1.0,
+            "origin": 0
+          }
+        ],
+        "visible_agents": [
+          {
+            "agent_id": 1,
+            "occupied_cells": [
+              [
+                2,
+                0
+              ]
+            ],
+            "moving": false
+          }
+        ],
+        "sensor_radius": 3,
+        "occlusion_model": "none"
+      }
+    },
+    {
+      "time": 1.0,
+      "kind": "DECISION",
+      "agent": 0,
+      "decision": {
+        "action_kind": "wait",
+        "next_vertex": [
+          0,
+          0
+        ],
+        "messages": [
+          {
+            "recipient": 1,
+            "kind": "MAP",
+            "payload_json": "{\"cells\": [{\"cell\": [0, 0], \"state\": \"free\", \"observed_at\": 1.0, \"origin\": 0}, {\"cell\": [1, 0], \"state\": \"free\", \"observed_at\": 1.0, \"origin\": 0}, {\"cell\": [2, 0], \"state\": \"free\", \"observed_at\": 1.0, \"origin\": 0}, {\"cell\": [0, 1], \"state\": \"free\", \"observed_at\": 1.0, \"origin\": 0}, {\"cell\": [1, 1], \"state\": \"free\", \"observed_at\": 1.0, \"origin\": 0}, {\"cell\": [2, 1], \"state\": \"free\", \"observed_at\": 1.0, \"origin\": 0}]}"
+          }
+        ]
+      }
+    },
+    {
+      "time": 1.0,
+      "kind": "ACTION_START",
+      "action": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 1.0,
+        "end_time": 2.0,
+        "action_id": 2
+      }
+    },
+    {
+      "time": 1.0,
+      "cycle": 0,
+      "phase": 3,
+      "sequence": 13,
+      "kind": "DECIDE",
+      "payload": {
+        "ego_id": 1,
+        "event_time": 1.0,
+        "ego_pose": [
+          2,
+          0
+        ],
+        "visible_cells": [
+          {
+            "cell": [
+              0,
+              0
+            ],
+            "state": "free",
+            "observed_at": 1.0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              1,
+              0
+            ],
+            "state": "free",
+            "observed_at": 1.0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              2,
+              0
+            ],
+            "state": "free",
+            "observed_at": 1.0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              0,
+              1
+            ],
+            "state": "free",
+            "observed_at": 1.0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              1,
+              1
+            ],
+            "state": "free",
+            "observed_at": 1.0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              2,
+              1
+            ],
+            "state": "free",
+            "observed_at": 1.0,
+            "origin": 1
+          }
+        ],
+        "visible_agents": [
+          {
+            "agent_id": 0,
+            "occupied_cells": [
+              [
+                0,
+                0
+              ]
+            ],
+            "moving": false
+          }
+        ],
+        "sensor_radius": 3,
+        "occlusion_model": "none"
+      }
+    },
+    {
+      "time": 1.0,
+      "kind": "DECISION",
+      "agent": 1,
+      "decision": {
+        "action_kind": "wait",
+        "next_vertex": [
+          2,
+          0
+        ],
+        "messages": [
+          {
+            "recipient": 0,
+            "kind": "MAP",
+            "payload_json": "{\"cells\": [{\"cell\": [0, 0], \"state\": \"free\", \"observed_at\": 1.0, \"origin\": 1}, {\"cell\": [1, 0], \"state\": \"free\", \"observed_at\": 1.0, \"origin\": 1}, {\"cell\": [2, 0], \"state\": \"free\", \"observed_at\": 1.0, \"origin\": 1}, {\"cell\": [0, 1], \"state\": \"free\", \"observed_at\": 1.0, \"origin\": 1}, {\"cell\": [1, 1], \"state\": \"free\", \"observed_at\": 1.0, \"origin\": 1}, {\"cell\": [2, 1], \"state\": \"free\", \"observed_at\": 1.0, \"origin\": 1}]}"
+          }
+        ]
+      }
+    },
+    {
+      "time": 1.0,
+      "kind": "ACTION_START",
+      "action": {
+        "agent_id": 1,
+        "source": [
+          2,
+          0
+        ],
+        "target": [
+          2,
+          0
+        ],
+        "start_time": 1.0,
+        "end_time": 2.0,
+        "action_id": 3
+      }
+    },
+    {
+      "time": 1.0782988759076195,
+      "cycle": 0,
+      "phase": 1,
+      "sequence": 5,
+      "kind": "MESSAGE_DELIVER",
+      "payload": {
+        "sender": 0,
+        "recipient": 1,
+        "kind": "MAP",
+        "sequence_id": 0,
+        "send_time": 0,
+        "deliver_time": 1.0782988759076195,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":0,\"origin\":0,\"state\":\"free\"}]}"
+      }
+    },
+    {
+      "time": 1.1984300274762287,
+      "cycle": 0,
+      "phase": 1,
+      "sequence": 8,
+      "kind": "MESSAGE_DELIVER",
+      "payload": {
+        "sender": 1,
+        "recipient": 0,
+        "kind": "MAP",
+        "sequence_id": 0,
+        "send_time": 0,
+        "deliver_time": 1.1984300274762287,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":0,\"origin\":1,\"state\":\"free\"}]}"
+      }
+    },
+    {
+      "time": 2.0,
+      "cycle": 0,
+      "phase": 0,
+      "sequence": 15,
+      "kind": "ACTION_FINISH",
+      "payload": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 1.0,
+        "end_time": 2.0,
+        "action_id": 2
+      }
+    },
+    {
+      "time": 2.0,
+      "cycle": 0,
+      "phase": 0,
+      "sequence": 18,
+      "kind": "ACTION_FINISH",
+      "payload": {
+        "agent_id": 1,
+        "source": [
+          2,
+          0
+        ],
+        "target": [
+          2,
+          0
+        ],
+        "start_time": 1.0,
+        "end_time": 2.0,
+        "action_id": 3
+      }
+    },
+    {
+      "time": 2.0,
+      "cycle": 0,
+      "phase": 2,
+      "sequence": 19,
+      "kind": "SENSE",
+      "payload": 0
+    },
+    {
+      "time": 2.0,
+      "cycle": 0,
+      "phase": 2,
+      "sequence": 20,
+      "kind": "SENSE",
+      "payload": 1
+    },
+    {
+      "time": 2.0,
+      "cycle": 0,
+      "phase": 3,
+      "sequence": 21,
+      "kind": "DECIDE",
+      "payload": {
+        "ego_id": 0,
+        "event_time": 2.0,
+        "ego_pose": [
+          0,
+          0
+        ],
+        "visible_cells": [
+          {
+            "cell": [
+              0,
+              0
+            ],
+            "state": "free",
+            "observed_at": 2.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              1,
+              0
+            ],
+            "state": "free",
+            "observed_at": 2.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              2,
+              0
+            ],
+            "state": "free",
+            "observed_at": 2.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              0,
+              1
+            ],
+            "state": "free",
+            "observed_at": 2.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              1,
+              1
+            ],
+            "state": "free",
+            "observed_at": 2.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              2,
+              1
+            ],
+            "state": "free",
+            "observed_at": 2.0,
+            "origin": 0
+          }
+        ],
+        "visible_agents": [
+          {
+            "agent_id": 1,
+            "occupied_cells": [
+              [
+                2,
+                0
+              ]
+            ],
+            "moving": false
+          }
+        ],
+        "sensor_radius": 3,
+        "occlusion_model": "none"
+      }
+    },
+    {
+      "time": 2.0,
+      "kind": "DECISION",
+      "agent": 0,
+      "decision": {
+        "action_kind": "move",
+        "next_vertex": [
+          0,
+          1
+        ],
+        "messages": [
+          {
+            "recipient": 1,
+            "kind": "MAP",
+            "payload_json": "{\"cells\": [{\"cell\": [0, 0], \"state\": \"free\", \"observed_at\": 2.0, \"origin\": 0}, {\"cell\": [1, 0], \"state\": \"free\", \"observed_at\": 2.0, \"origin\": 0}, {\"cell\": [2, 0], \"state\": \"free\", \"observed_at\": 2.0, \"origin\": 0}, {\"cell\": [0, 1], \"state\": \"free\", \"observed_at\": 2.0, \"origin\": 0}, {\"cell\": [1, 1], \"state\": \"free\", \"observed_at\": 2.0, \"origin\": 0}, {\"cell\": [2, 1], \"state\": \"free\", \"observed_at\": 2.0, \"origin\": 0}]}"
+          }
+        ]
+      }
+    },
+    {
+      "time": 2.0,
+      "kind": "ACTION_START",
+      "action": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          1
+        ],
+        "start_time": 2.0,
+        "end_time": 3.0,
+        "action_id": 4
+      }
+    },
+    {
+      "time": 2.0,
+      "cycle": 0,
+      "phase": 3,
+      "sequence": 22,
+      "kind": "DECIDE",
+      "payload": {
+        "ego_id": 1,
+        "event_time": 2.0,
+        "ego_pose": [
+          2,
+          0
+        ],
+        "visible_cells": [
+          {
+            "cell": [
+              0,
+              0
+            ],
+            "state": "free",
+            "observed_at": 2.0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              1,
+              0
+            ],
+            "state": "free",
+            "observed_at": 2.0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              2,
+              0
+            ],
+            "state": "free",
+            "observed_at": 2.0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              0,
+              1
+            ],
+            "state": "free",
+            "observed_at": 2.0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              1,
+              1
+            ],
+            "state": "free",
+            "observed_at": 2.0,
+            "origin": 1
+          },
+          {
+            "cell": [
+              2,
+              1
+            ],
+            "state": "free",
+            "observed_at": 2.0,
+            "origin": 1
+          }
+        ],
+        "visible_agents": [
+          {
+            "agent_id": 0,
+            "occupied_cells": [
+              [
+                0,
+                0
+              ]
+            ],
+            "moving": false
+          }
+        ],
+        "sensor_radius": 3,
+        "occlusion_model": "none"
+      }
+    },
+    {
+      "time": 2.0,
+      "kind": "DECISION",
+      "agent": 1,
+      "decision": {
+        "action_kind": "move",
+        "next_vertex": [
+          2,
+          1
+        ],
+        "messages": [
+          {
+            "recipient": 0,
+            "kind": "MAP",
+            "payload_json": "{\"cells\": [{\"cell\": [0, 0], \"state\": \"free\", \"observed_at\": 2.0, \"origin\": 1}, {\"cell\": [1, 0], \"state\": \"free\", \"observed_at\": 2.0, \"origin\": 1}, {\"cell\": [2, 0], \"state\": \"free\", \"observed_at\": 2.0, \"origin\": 1}, {\"cell\": [0, 1], \"state\": \"free\", \"observed_at\": 2.0, \"origin\": 1}, {\"cell\": [1, 1], \"state\": \"free\", \"observed_at\": 2.0, \"origin\": 1}, {\"cell\": [2, 1], \"state\": \"free\", \"observed_at\": 2.0, \"origin\": 1}]}"
+          }
+        ]
+      }
+    },
+    {
+      "time": 2.0,
+      "kind": "ACTION_START",
+      "action": {
+        "agent_id": 1,
+        "source": [
+          2,
+          0
+        ],
+        "target": [
+          2,
+          1
+        ],
+        "start_time": 2.0,
+        "end_time": 3.0,
+        "action_id": 5
+      }
+    },
+    {
+      "time": 2.4539726167414475,
+      "cycle": 0,
+      "phase": 1,
+      "sequence": 14,
+      "kind": "MESSAGE_DELIVER",
+      "payload": {
+        "sender": 0,
+        "recipient": 1,
+        "kind": "MAP",
+        "sequence_id": 1,
+        "send_time": 1.0,
+        "deliver_time": 2.4539726167414475,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"}]}"
+      }
+    },
+    {
+      "time": 3.0,
+      "cycle": 0,
+      "phase": 0,
+      "sequence": 25,
+      "kind": "ACTION_FINISH",
+      "payload": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          1
+        ],
+        "start_time": 2.0,
+        "end_time": 3.0,
+        "action_id": 4
+      }
+    },
+    {
+      "time": 3.0,
+      "cycle": 0,
+      "phase": 0,
+      "sequence": 27,
+      "kind": "ACTION_FINISH",
+      "payload": {
+        "agent_id": 1,
+        "source": [
+          2,
+          0
+        ],
+        "target": [
+          2,
+          1
+        ],
+        "start_time": 2.0,
+        "end_time": 3.0,
+        "action_id": 5
+      }
+    }
+  ],
+  "network_trace": [
+    {
+      "event": "sent",
+      "message": {
+        "sender": 0,
+        "recipient": 1,
+        "kind": "MAP",
+        "sequence_id": 0,
+        "send_time": 0,
+        "deliver_time": 1.0782988759076195,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":0,\"origin\":0,\"state\":\"free\"}]}"
+      }
+    },
+    {
+      "event": "duplicated",
+      "message": {
+        "sender": 0,
+        "recipient": 1,
+        "kind": "MAP",
+        "sequence_id": 0,
+        "send_time": 0,
+        "deliver_time": 3.602982362469459,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":0,\"origin\":0,\"state\":\"free\"}]}"
+      }
+    },
+    {
+      "event": "sent",
+      "message": {
+        "sender": 1,
+        "recipient": 0,
+        "kind": "MAP",
+        "sequence_id": 0,
+        "send_time": 0,
+        "deliver_time": 1.1984300274762287,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":0,\"origin\":1,\"state\":\"free\"}]}"
+      }
+    },
+    {
+      "event": "sent",
+      "message": {
+        "sender": 0,
+        "recipient": 1,
+        "kind": "MAP",
+        "sequence_id": 1,
+        "send_time": 1.0,
+        "deliver_time": 2.4539726167414475,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"}]}"
+      }
+    },
+    {
+      "event": "sent",
+      "message": {
+        "sender": 1,
+        "recipient": 0,
+        "kind": "MAP",
+        "sequence_id": 1,
+        "send_time": 1.0,
+        "deliver_time": 3.0500090939623923,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":1.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":1.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":1.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":1.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":1.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":1.0,\"origin\":1,\"state\":\"free\"}]}"
+      }
+    },
+    {
+      "event": "duplicated",
+      "message": {
+        "sender": 1,
+        "recipient": 0,
+        "kind": "MAP",
+        "sequence_id": 1,
+        "send_time": 1.0,
+        "deliver_time": 3.5950831249948894,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":1.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":1.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":1.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":1.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":1.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":1.0,\"origin\":1,\"state\":\"free\"}]}"
+      }
+    },
+    {
+      "event": "delivered",
+      "message": {
+        "sender": 0,
+        "recipient": 1,
+        "kind": "MAP",
+        "sequence_id": 0,
+        "send_time": 0,
+        "deliver_time": 1.0782988759076195,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":0,\"origin\":0,\"state\":\"free\"}]}"
+      }
+    },
+    {
+      "event": "delivered",
+      "message": {
+        "sender": 1,
+        "recipient": 0,
+        "kind": "MAP",
+        "sequence_id": 0,
+        "send_time": 0,
+        "deliver_time": 1.1984300274762287,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":0,\"origin\":1,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":0,\"origin\":1,\"state\":\"free\"}]}"
+      }
+    },
+    {
+      "event": "sent",
+      "message": {
+        "sender": 0,
+        "recipient": 1,
+        "kind": "MAP",
+        "sequence_id": 2,
+        "send_time": 2.0,
+        "deliver_time": 3.870754182897209,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":2.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":2.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":2.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":2.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":2.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":2.0,\"origin\":0,\"state\":\"free\"}]}"
+      }
+    },
+    {
+      "event": "duplicated",
+      "message": {
+        "sender": 0,
+        "recipient": 1,
+        "kind": "MAP",
+        "sequence_id": 2,
+        "send_time": 2.0,
+        "deliver_time": 5.045536271986067,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":2.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":2.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":2.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":2.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":2.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":2.0,\"origin\":0,\"state\":\"free\"}]}"
+      }
+    },
+    {
+      "event": "sent",
+      "message": {
+        "sender": 1,
+        "recipient": 0,
+        "kind": "MAP",
+        "sequence_id": 2,
+        "send_time": 2.0,
+        "deliver_time": 3.7912601860739708,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":2.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":2.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":2.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":2.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":2.0,\"origin\":1,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":2.0,\"origin\":1,\"state\":\"free\"}]}"
+      }
+    },
+    {
+      "event": "delivered",
+      "message": {
+        "sender": 0,
+        "recipient": 1,
+        "kind": "MAP",
+        "sequence_id": 1,
+        "send_time": 1.0,
+        "deliver_time": 2.4539726167414475,
+        "payload_json": "{\"cells\":[{\"cell\":[0,0],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,0],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,0],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[0,1],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[1,1],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"},{\"cell\":[2,1],\"observed_at\":1.0,\"origin\":0,\"state\":\"free\"}]}"
+      }
+    }
+  ],
+  "occupancy": [
+    {
+      "agent_id": 0,
+      "resources": [
+        [
+          0,
+          0
+        ]
+      ],
+      "start": 0,
+      "end": 1.0,
+      "edge": null
+    },
+    {
+      "agent_id": 1,
+      "resources": [
+        [
+          2,
+          0
+        ]
+      ],
+      "start": 0,
+      "end": 1.0,
+      "edge": null
+    },
+    {
+      "agent_id": 0,
+      "resources": [
+        [
+          0,
+          0
+        ]
+      ],
+      "start": 1.0,
+      "end": 2.0,
+      "edge": null
+    },
+    {
+      "agent_id": 1,
+      "resources": [
+        [
+          2,
+          0
+        ]
+      ],
+      "start": 1.0,
+      "end": 2.0,
+      "edge": null
+    },
+    {
+      "agent_id": 0,
+      "resources": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "start": 2.0,
+      "end": 3.0,
+      "edge": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "agent_id": 1,
+      "resources": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ],
+      "start": 2.0,
+      "end": 3.0,
+      "edge": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ]
+      ]
+    }
+  ],
+  "scenario": {
+    "name": "delayed_lossy_map_reports",
+    "seed": null,
+    "meta": {},
+    "grid": {
+      "name": "grid",
+      "width": 3,
+      "height": 2,
+      "obstacles": []
+    },
+    "starts": [
+      [
+        0,
+        0
+      ],
+      [
+        2,
+        0
+      ]
+    ],
+    "goals": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        1
+      ]
+    ]
+  },
+  "config": {
+    "horizon": 20.0,
+    "sensor_radius": 3,
+    "durations": [
+      1.0
+    ],
+    "duration_seed": 0,
+    "duration_jitter": 0.0,
+    "wait_duration": 1.0,
+    "max_events": 100000,
+    "network": {
+      "seed": 7,
+      "radius": 3,
+      "min_latency": 0.0,
+      "max_latency": 3,
+      "loss": 0.25,
+      "duplication": 0.5
+    }
+  }
+}

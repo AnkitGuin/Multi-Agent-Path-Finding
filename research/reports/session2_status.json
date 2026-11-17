@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "client_date": "2026-11-17",
+  "whole_roadmap_complete": false,
+  "current_test_count": 275,
+  "upstream_pibt_tests": 8,
+  "legacy_jobs": 1380,
+  "legacy_invalid": 0,
+  "legacy_status_soc_matches": 1320,
+  "native_pibt_runs": 20,
+  "native_causal_pibt_runs": 20,
+  "development_runs": 1470,
+  "development_replays_verified": 1470,
+  "model": "duration_resources_v0.2.1",
+  "map_clusters": 34,
+  "claim_control_collision_episodes": 0,
+  "claim_control_total_episodes": 1050,
+  "final_holdout_executed": false,
+  "manuscript_started": false,
+  "gates": {
+    "G1": "no distinct novel method established",
+    "G2": "bounded engine/information tests pass",
+    "G3": "partial: native references plus local controls; modern matched baseline missing",
+    "G4": "waiting/cost improvement not supported; development byte savings observed",
+    "G5": "not attempted"
+  },
+  "next_work": [
+    "progress/deadlock recovery under matched information",
+    "modern local baseline adaptation and complete literature review",
+    "resolve LSRP compiler/license",
+    "final holdout/manuscript only if evidence gates pass"
+  ]
+}

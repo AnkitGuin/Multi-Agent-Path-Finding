@@ -1,0 +1,614 @@
+{
+  "schema_version": 1,
+  "command": [
+    "scripts/reproduce_native_baselines.py"
+  ],
+  "revisions": {
+    "pypibt": "a3c97f60413c6619a29a5022969896bc54877edc",
+    "causal_pibt": "b2e9e650a1f5446b88cd7b9394504e97435e7f38",
+    "causal_graph": "98df17f364b8e94f927e5e1317eda4f40a2238a6"
+  },
+  "records": [
+    {
+      "method": "PIBT_native",
+      "file": "pibt-random-0.json",
+      "status": "success",
+      "goal_departures": 2,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-random-1.json",
+      "status": "success",
+      "goal_departures": 1,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-random-2.json",
+      "status": "success",
+      "goal_departures": 5,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-random-3.json",
+      "status": "success",
+      "goal_departures": 1,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-random-4.json",
+      "status": "success",
+      "goal_departures": 13,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-random-5.json",
+      "status": "success",
+      "goal_departures": 0,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-random-6.json",
+      "status": "success",
+      "goal_departures": 2,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-random-7.json",
+      "status": "success",
+      "goal_departures": 7,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-random-8.json",
+      "status": "success",
+      "goal_departures": 1,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-random-9.json",
+      "status": "success",
+      "goal_departures": 0,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-rooms-0.json",
+      "status": "success",
+      "goal_departures": 2,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-rooms-1.json",
+      "status": "success",
+      "goal_departures": 0,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-rooms-2.json",
+      "status": "success",
+      "goal_departures": 2,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-rooms-3.json",
+      "status": "success",
+      "goal_departures": 1,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-rooms-4.json",
+      "status": "success",
+      "goal_departures": 0,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-rooms-5.json",
+      "status": "success",
+      "goal_departures": 0,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-rooms-6.json",
+      "status": "success",
+      "goal_departures": 1,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-rooms-7.json",
+      "status": "success",
+      "goal_departures": 0,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-rooms-8.json",
+      "status": "success",
+      "goal_departures": 3,
+      "collision_count": 0
+    },
+    {
+      "method": "PIBT_native",
+      "file": "pibt-rooms-9.json",
+      "status": "success",
+      "goal_departures": 0,
+      "collision_count": 0
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-small-crossing_2agents-0.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\small-crossing_2agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-small-crossing_2agents-0.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "0"
+      ],
+      "map_sha256": "e468b07cb8557f1e795a8fac81a8a9a4bb8d32e8fe64e739ab4e8539590807a5",
+      "instance_sha256": "b4f6c6d3b4b8f5179b242584ce2d7b72c8b7020784b8313d057efd350b4ecd58",
+      "verified": true,
+      "snapshots": 19,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-small-crossing_2agents-1.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\small-crossing_2agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-small-crossing_2agents-1.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "1"
+      ],
+      "map_sha256": "e468b07cb8557f1e795a8fac81a8a9a4bb8d32e8fe64e739ab4e8539590807a5",
+      "instance_sha256": "b4f6c6d3b4b8f5179b242584ce2d7b72c8b7020784b8313d057efd350b4ecd58",
+      "verified": true,
+      "snapshots": 29,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-small-crossing_2agents-2.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\small-crossing_2agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-small-crossing_2agents-2.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "2"
+      ],
+      "map_sha256": "e468b07cb8557f1e795a8fac81a8a9a4bb8d32e8fe64e739ab4e8539590807a5",
+      "instance_sha256": "b4f6c6d3b4b8f5179b242584ce2d7b72c8b7020784b8313d057efd350b4ecd58",
+      "verified": true,
+      "snapshots": 23,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-small-crossing_2agents-3.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\small-crossing_2agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-small-crossing_2agents-3.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "3"
+      ],
+      "map_sha256": "e468b07cb8557f1e795a8fac81a8a9a4bb8d32e8fe64e739ab4e8539590807a5",
+      "instance_sha256": "b4f6c6d3b4b8f5179b242584ce2d7b72c8b7020784b8313d057efd350b4ecd58",
+      "verified": true,
+      "snapshots": 16,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-small-crossing_2agents-4.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\small-crossing_2agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-small-crossing_2agents-4.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "4"
+      ],
+      "map_sha256": "e468b07cb8557f1e795a8fac81a8a9a4bb8d32e8fe64e739ab4e8539590807a5",
+      "instance_sha256": "b4f6c6d3b4b8f5179b242584ce2d7b72c8b7020784b8313d057efd350b4ecd58",
+      "verified": true,
+      "snapshots": 18,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-6x6_collision_8agents-0.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\6x6_collision_8agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-6x6_collision_8agents-0.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "0"
+      ],
+      "map_sha256": "e39f65978ab6970a851c2f02aed4532fde1d573bf9bef0abf7519b6e7796c339",
+      "instance_sha256": "d6bd857c6c1df60f12f9aa7ee24fedd54ecbcef5c676c849e62edd95a7c43d77",
+      "verified": true,
+      "snapshots": 200,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-6x6_collision_8agents-1.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\6x6_collision_8agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-6x6_collision_8agents-1.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "1"
+      ],
+      "map_sha256": "e39f65978ab6970a851c2f02aed4532fde1d573bf9bef0abf7519b6e7796c339",
+      "instance_sha256": "d6bd857c6c1df60f12f9aa7ee24fedd54ecbcef5c676c849e62edd95a7c43d77",
+      "verified": true,
+      "snapshots": 186,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-6x6_collision_8agents-2.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\6x6_collision_8agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-6x6_collision_8agents-2.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "2"
+      ],
+      "map_sha256": "e39f65978ab6970a851c2f02aed4532fde1d573bf9bef0abf7519b6e7796c339",
+      "instance_sha256": "d6bd857c6c1df60f12f9aa7ee24fedd54ecbcef5c676c849e62edd95a7c43d77",
+      "verified": true,
+      "snapshots": 167,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-6x6_collision_8agents-3.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\6x6_collision_8agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-6x6_collision_8agents-3.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "3"
+      ],
+      "map_sha256": "e39f65978ab6970a851c2f02aed4532fde1d573bf9bef0abf7519b6e7796c339",
+      "instance_sha256": "d6bd857c6c1df60f12f9aa7ee24fedd54ecbcef5c676c849e62edd95a7c43d77",
+      "verified": true,
+      "snapshots": 161,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-6x6_collision_8agents-4.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\6x6_collision_8agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-6x6_collision_8agents-4.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "4"
+      ],
+      "map_sha256": "e39f65978ab6970a851c2f02aed4532fde1d573bf9bef0abf7519b6e7796c339",
+      "instance_sha256": "d6bd857c6c1df60f12f9aa7ee24fedd54ecbcef5c676c849e62edd95a7c43d77",
+      "verified": true,
+      "snapshots": 175,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-three-bridge_collision_6agents-0.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\three-bridge_collision_6agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-three-bridge_collision_6agents-0.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "0"
+      ],
+      "map_sha256": "0829f4e4dd5dada39fe38884de73987ec8e949a24c2b5b2051aaff1c51cac283",
+      "instance_sha256": "c569d6f79b676f91f1372e8a7de93e21340c21c828347d77d404aadfd9b50c69",
+      "verified": true,
+      "snapshots": 168,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-three-bridge_collision_6agents-1.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\three-bridge_collision_6agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-three-bridge_collision_6agents-1.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "1"
+      ],
+      "map_sha256": "0829f4e4dd5dada39fe38884de73987ec8e949a24c2b5b2051aaff1c51cac283",
+      "instance_sha256": "c569d6f79b676f91f1372e8a7de93e21340c21c828347d77d404aadfd9b50c69",
+      "verified": true,
+      "snapshots": 172,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-three-bridge_collision_6agents-2.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\three-bridge_collision_6agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-three-bridge_collision_6agents-2.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "2"
+      ],
+      "map_sha256": "0829f4e4dd5dada39fe38884de73987ec8e949a24c2b5b2051aaff1c51cac283",
+      "instance_sha256": "c569d6f79b676f91f1372e8a7de93e21340c21c828347d77d404aadfd9b50c69",
+      "verified": true,
+      "snapshots": 180,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-three-bridge_collision_6agents-3.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\three-bridge_collision_6agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-three-bridge_collision_6agents-3.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "3"
+      ],
+      "map_sha256": "0829f4e4dd5dada39fe38884de73987ec8e949a24c2b5b2051aaff1c51cac283",
+      "instance_sha256": "c569d6f79b676f91f1372e8a7de93e21340c21c828347d77d404aadfd9b50c69",
+      "verified": true,
+      "snapshots": 169,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-three-bridge_collision_6agents-4.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\three-bridge_collision_6agents.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-three-bridge_collision_6agents-4.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "4"
+      ],
+      "map_sha256": "0829f4e4dd5dada39fe38884de73987ec8e949a24c2b5b2051aaff1c51cac283",
+      "instance_sha256": "c569d6f79b676f91f1372e8a7de93e21340c21c828347d77d404aadfd9b50c69",
+      "verified": true,
+      "snapshots": 165,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-sample-0.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\sample.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-sample-0.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "0"
+      ],
+      "map_sha256": "e39f65978ab6970a851c2f02aed4532fde1d573bf9bef0abf7519b6e7796c339",
+      "instance_sha256": "f46e3b6d43e99a0c643e9cc523843f4a233520591b4ae769309bc579a0a80374",
+      "verified": true,
+      "snapshots": 104,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-sample-1.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\sample.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-sample-1.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "1"
+      ],
+      "map_sha256": "e39f65978ab6970a851c2f02aed4532fde1d573bf9bef0abf7519b6e7796c339",
+      "instance_sha256": "f46e3b6d43e99a0c643e9cc523843f4a233520591b4ae769309bc579a0a80374",
+      "verified": true,
+      "snapshots": 110,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-sample-2.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\sample.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-sample-2.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "2"
+      ],
+      "map_sha256": "e39f65978ab6970a851c2f02aed4532fde1d573bf9bef0abf7519b6e7796c339",
+      "instance_sha256": "f46e3b6d43e99a0c643e9cc523843f4a233520591b4ae769309bc579a0a80374",
+      "verified": true,
+      "snapshots": 94,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-sample-3.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\sample.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-sample-3.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "3"
+      ],
+      "map_sha256": "e39f65978ab6970a851c2f02aed4532fde1d573bf9bef0abf7519b6e7796c339",
+      "instance_sha256": "f46e3b6d43e99a0c643e9cc523843f4a233520591b4ae769309bc579a0a80374",
+      "verified": true,
+      "snapshots": 98,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    },
+    {
+      "method": "CausalPIBT_native",
+      "file": "causal-sample-4.txt",
+      "command": [
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe",
+        "-i",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\instances\\sample.txt",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\results\\native_2026_11_17\\causal-sample-4.txt",
+        "-s",
+        "CAUSAL_PIBT",
+        "-r",
+        "4"
+      ],
+      "map_sha256": "e39f65978ab6970a851c2f02aed4532fde1d573bf9bef0abf7519b6e7796c339",
+      "instance_sha256": "f46e3b6d43e99a0c643e9cc523843f4a233520591b4ae769309bc579a0a80374",
+      "verified": true,
+      "snapshots": 105,
+      "success": true,
+      "collision_count": 0,
+      "variant": "KNOWN_GRAPH_ATOMIC_INTERACTIONS_NATIVE",
+      "assumptions": "authoritative atomic interactions; known graph; vacatable goals; no packet network"
+    }
+  ],
+  "comparison_warning": "native references have different information/goal/timing models; no pooled ranking"
+}

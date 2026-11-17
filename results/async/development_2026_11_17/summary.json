@@ -1,0 +1,9 @@
+{
+  "runs": 1470,
+  "statuses": {
+    "collision": 213,
+    "success": 148,
+    "timeout": 1109
+  },
+  "wall_seconds": 181.0051426999853
+}

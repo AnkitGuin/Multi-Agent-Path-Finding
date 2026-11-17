@@ -1,0 +1,10 @@
+{
+  "rows": 1380,
+  "expected": 1380,
+  "statuses": {
+    "conflict": 302,
+    "no_solution": 4,
+    "ok": 873,
+    "timeout": 201
+  }
+}

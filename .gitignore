@@ -23,3 +23,9 @@ Thumbs.db
 
 # Generated local logs
 *.log
+
+# Downloaded third-party baseline checkouts and local build products
+external/
+
+# Temporary file emitted by the author's native temporal-network extractor
+/local/tmp.txt

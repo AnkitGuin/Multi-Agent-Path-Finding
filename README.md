@@ -1,5 +1,12 @@
 # An Empirical Study of Coordination Strategies for Multi-Agent Pathfinding (MAPF)
 
+Research extension (in progress): see [research/README.md](research/README.md)
+for the asynchronous simulator, partial observations, reproducible validation,
+original baseline audit and unresolved research gates. The audit found 114
+original tests and three pre-existing goal-occupancy failures; the research
+branch repairs that violation and preserves the original failing evidence.
+Historical results below have not been fully recertified after the repair.
+
 An undergraduate AI research project: a working MAPF simulator, three
 coordination strategies of increasing sophistication (Independent A* →
 Prioritized Planning → Conflict-Based Search), a reproducible experiment

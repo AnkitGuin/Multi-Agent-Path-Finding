@@ -1,0 +1,65 @@
+{
+  "compiler": "g++.exe (MinGW.org GCC-6.3.0-1) 6.3.0\nCopyright (C) 2016 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n",
+  "builds": [
+    {
+      "name": "causal_pibt",
+      "revision": "b2e9e650a1f5446b88cd7b9394504e97435e7f38",
+      "command": [
+        "C:\\MinGW\\bin\\g++.EXE",
+        "-std=c++1z",
+        "-O1",
+        "-include",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\research_paths.hpp",
+        "-I",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\time_independent\\include",
+        "-I",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\third_party\\grid-pathfinding\\graph\\include",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\time_independent\\src\\agent.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\time_independent\\src\\causal_pibt.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\time_independent\\src\\causal_pibt_mapf.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\time_independent\\src\\fsp.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\time_independent\\src\\greedy.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\time_independent\\src\\mapf_dp.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\time_independent\\src\\mapf_random.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\time_independent\\src\\mcp.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\time_independent\\src\\problem.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\time_independent\\src\\stn.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\third_party\\grid-pathfinding\\graph\\src\\graph.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\third_party\\grid-pathfinding\\graph\\src\\node.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\third_party\\grid-pathfinding\\graph\\src\\pos.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.cpp",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\time-independent-planning\\app.exe"
+      ],
+      "exit_code": 0,
+      "log": "causal_pibt.txt",
+      "source_modified": false
+    },
+    {
+      "name": "lsrp",
+      "revision": "8d39da609a8c5601f05492ebbb089a32a0db4dd2",
+      "command": [
+        "C:\\MinGW\\bin\\g++.EXE",
+        "-std=c++1z",
+        "-O1",
+        "-I",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\lsrp\\include",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\lsrp\\source\\graph.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\lsrp\\source\\graph_io.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\lsrp\\source\\mapf_util.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\lsrp\\source\\mapfaa_lsrp.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\lsrp\\source\\mapfaa_util.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\lsrp\\source\\search.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\lsrp\\source\\search_astar.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\lsrp\\source\\search_dijkstra.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\lsrp\\source\\union_find.cpp",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\lsrp\\test\\test_toyexample.cpp",
+        "-o",
+        "D:\\Multi Agent Path Finding\\mapf\\external\\lsrp\\toy.exe"
+      ],
+      "exit_code": 1,
+      "log": "lsrp.txt",
+      "source_modified": false
+    }
+  ]
+}

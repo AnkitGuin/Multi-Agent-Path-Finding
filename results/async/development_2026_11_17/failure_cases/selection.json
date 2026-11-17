@@ -1,0 +1,14 @@
+{
+  "success_run_id": "f9d651e64babb4aab1512264ea009e4fd5504b447059be88978943f685552004",
+  "success_replay": "replays/f9d651e64babb4aab1512264ea009e4fd5504b447059be88978943f685552004.json.gz",
+  "selection": "first selective success; first reliable open/random/rooms timeout with a successful centralized dependency witness",
+  "checked_candidates": [
+    {
+      "run_id": "9263b8809c336d06503f1bdc968716885a886b01c5a412c114707304a43d5f2c",
+      "cbs_status": "ok",
+      "dependency_status": "success"
+    }
+  ],
+  "oracle_witness_found": true,
+  "interpretation": "qualitative feasible-failure witness only; full-information oracle is not matched to local controls"
+}

@@ -358,6 +358,9 @@ def space_time_astar(
         return SearchResult(None)
     if not verifier.can_start(start):
         return SearchResult(None)
+    if start == goal and not verifier.can_terminate(start, 0):
+        # A target occupied at initialization is already a permanent goal.
+        return SearchResult(None)
 
     # Time horizon: constraints/reservations are finite, so any useful waiting
     # happens near them.  The slack keeps the search complete for all practical
@@ -407,6 +410,11 @@ def space_time_astar(
             if not verifier.can_enter(nxt, nt):
                 continue
             if not verifier.can_move(cell, nxt, nt):
+                continue
+            # First arrival commits to staying at the target. Entering early
+            # and later leaving to evade a future constraint/reservation would
+            # violate the model, even if a subsequent arrival is admissible.
+            if nxt == goal and not verifier.can_terminate(nxt, nt):
                 continue
             nstate = (nxt, nt)
             if nstate in closed:

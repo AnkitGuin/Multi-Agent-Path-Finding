@@ -1,0 +1,734 @@
+{
+  "schema_version": 1,
+  "model": "duration_resources_v0.1",
+  "scenario_hash": "fb92881f4474c716640bb58ad3586fc21e21eeef30d732b33efd22348fd2654e",
+  "config_hash": "ec63dd620bcca392d02a2883a3de67034f05daccbffaa22ff1df3e294b305b7f",
+  "termination_reason": "timeout",
+  "error": null,
+  "completed_agents": 0,
+  "completion_fraction": 0.0,
+  "agent_count": 1,
+  "elapsed_time": 5,
+  "makespan": null,
+  "executed_distance_soc": 0.0,
+  "executed_time_soc": 5,
+  "censored": true,
+  "total_wait_time": 5.0,
+  "per_agent_wait": [
+    5.0
+  ],
+  "per_agent_arrival": [
+    null
+  ],
+  "per_agent_distance": [
+    0.0
+  ],
+  "decisions": 6,
+  "unsafe_move_attempts": 1,
+  "collision_count": 0,
+  "collisions": [],
+  "deadlock_flag": null,
+  "planning_cpu_seconds": 0.0,
+  "sim_wall_seconds": 0.00047069997526705265,
+  "messages_sent": 0,
+  "messages_delivered": 0,
+  "bytes_sent": 0,
+  "bytes_delivered": 0,
+  "method": "scripted_validation_fixture",
+  "oracle_access": true,
+  "replan_count": null,
+  "peak_memory": null,
+  "events": [
+    {
+      "time": 0,
+      "cycle": 0,
+      "phase": 2,
+      "sequence": 0,
+      "kind": "SENSE",
+      "payload": 0
+    },
+    {
+      "time": 0,
+      "cycle": 0,
+      "phase": 3,
+      "sequence": 2,
+      "kind": "DECIDE",
+      "payload": {
+        "ego_id": 0,
+        "event_time": 0,
+        "ego_pose": [
+          0,
+          0
+        ],
+        "visible_cells": [
+          {
+            "cell": [
+              0,
+              0
+            ],
+            "state": "free",
+            "observed_at": 0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              1,
+              0
+            ],
+            "state": "blocked",
+            "observed_at": 0,
+            "origin": 0
+          }
+        ],
+        "visible_agents": [],
+        "sensor_radius": 1,
+        "occlusion_model": "none"
+      }
+    },
+    {
+      "time": 0,
+      "kind": "DECISION",
+      "agent": 0,
+      "decision": {
+        "action_kind": "move",
+        "next_vertex": [
+          1,
+          0
+        ],
+        "messages": []
+      }
+    },
+    {
+      "time": 0,
+      "kind": "ACTION_FAILED",
+      "agent": 0,
+      "reason": "target has not been verified free by local sensing"
+    },
+    {
+      "time": 0,
+      "kind": "ACTION_START",
+      "action": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 0,
+        "end_time": 1.0,
+        "action_id": 0
+      }
+    },
+    {
+      "time": 1.0,
+      "cycle": 0,
+      "phase": 0,
+      "sequence": 3,
+      "kind": "ACTION_FINISH",
+      "payload": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 0,
+        "end_time": 1.0,
+        "action_id": 0
+      }
+    },
+    {
+      "time": 1.0,
+      "cycle": 0,
+      "phase": 2,
+      "sequence": 4,
+      "kind": "SENSE",
+      "payload": 0
+    },
+    {
+      "time": 1.0,
+      "cycle": 0,
+      "phase": 3,
+      "sequence": 5,
+      "kind": "DECIDE",
+      "payload": {
+        "ego_id": 0,
+        "event_time": 1.0,
+        "ego_pose": [
+          0,
+          0
+        ],
+        "visible_cells": [
+          {
+            "cell": [
+              0,
+              0
+            ],
+            "state": "free",
+            "observed_at": 1.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              1,
+              0
+            ],
+            "state": "blocked",
+            "observed_at": 1.0,
+            "origin": 0
+          }
+        ],
+        "visible_agents": [],
+        "sensor_radius": 1,
+        "occlusion_model": "none"
+      }
+    },
+    {
+      "time": 1.0,
+      "kind": "DECISION",
+      "agent": 0,
+      "decision": {
+        "action_kind": "wait",
+        "next_vertex": [
+          0,
+          0
+        ],
+        "messages": []
+      }
+    },
+    {
+      "time": 1.0,
+      "kind": "ACTION_START",
+      "action": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 1.0,
+        "end_time": 2.0,
+        "action_id": 1
+      }
+    },
+    {
+      "time": 2.0,
+      "cycle": 0,
+      "phase": 0,
+      "sequence": 6,
+      "kind": "ACTION_FINISH",
+      "payload": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 1.0,
+        "end_time": 2.0,
+        "action_id": 1
+      }
+    },
+    {
+      "time": 2.0,
+      "cycle": 0,
+      "phase": 2,
+      "sequence": 7,
+      "kind": "SENSE",
+      "payload": 0
+    },
+    {
+      "time": 2.0,
+      "cycle": 0,
+      "phase": 3,
+      "sequence": 8,
+      "kind": "DECIDE",
+      "payload": {
+        "ego_id": 0,
+        "event_time": 2.0,
+        "ego_pose": [
+          0,
+          0
+        ],
+        "visible_cells": [
+          {
+            "cell": [
+              0,
+              0
+            ],
+            "state": "free",
+            "observed_at": 2.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              1,
+              0
+            ],
+            "state": "blocked",
+            "observed_at": 2.0,
+            "origin": 0
+          }
+        ],
+        "visible_agents": [],
+        "sensor_radius": 1,
+        "occlusion_model": "none"
+      }
+    },
+    {
+      "time": 2.0,
+      "kind": "DECISION",
+      "agent": 0,
+      "decision": {
+        "action_kind": "wait",
+        "next_vertex": [
+          0,
+          0
+        ],
+        "messages": []
+      }
+    },
+    {
+      "time": 2.0,
+      "kind": "ACTION_START",
+      "action": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 2.0,
+        "end_time": 3.0,
+        "action_id": 2
+      }
+    },
+    {
+      "time": 3.0,
+      "cycle": 0,
+      "phase": 0,
+      "sequence": 9,
+      "kind": "ACTION_FINISH",
+      "payload": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 2.0,
+        "end_time": 3.0,
+        "action_id": 2
+      }
+    },
+    {
+      "time": 3.0,
+      "cycle": 0,
+      "phase": 2,
+      "sequence": 10,
+      "kind": "SENSE",
+      "payload": 0
+    },
+    {
+      "time": 3.0,
+      "cycle": 0,
+      "phase": 3,
+      "sequence": 11,
+      "kind": "DECIDE",
+      "payload": {
+        "ego_id": 0,
+        "event_time": 3.0,
+        "ego_pose": [
+          0,
+          0
+        ],
+        "visible_cells": [
+          {
+            "cell": [
+              0,
+              0
+            ],
+            "state": "free",
+            "observed_at": 3.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              1,
+              0
+            ],
+            "state": "blocked",
+            "observed_at": 3.0,
+            "origin": 0
+          }
+        ],
+        "visible_agents": [],
+        "sensor_radius": 1,
+        "occlusion_model": "none"
+      }
+    },
+    {
+      "time": 3.0,
+      "kind": "DECISION",
+      "agent": 0,
+      "decision": {
+        "action_kind": "wait",
+        "next_vertex": [
+          0,
+          0
+        ],
+        "messages": []
+      }
+    },
+    {
+      "time": 3.0,
+      "kind": "ACTION_START",
+      "action": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 3.0,
+        "end_time": 4.0,
+        "action_id": 3
+      }
+    },
+    {
+      "time": 4.0,
+      "cycle": 0,
+      "phase": 0,
+      "sequence": 12,
+      "kind": "ACTION_FINISH",
+      "payload": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 3.0,
+        "end_time": 4.0,
+        "action_id": 3
+      }
+    },
+    {
+      "time": 4.0,
+      "cycle": 0,
+      "phase": 2,
+      "sequence": 13,
+      "kind": "SENSE",
+      "payload": 0
+    },
+    {
+      "time": 4.0,
+      "cycle": 0,
+      "phase": 3,
+      "sequence": 14,
+      "kind": "DECIDE",
+      "payload": {
+        "ego_id": 0,
+        "event_time": 4.0,
+        "ego_pose": [
+          0,
+          0
+        ],
+        "visible_cells": [
+          {
+            "cell": [
+              0,
+              0
+            ],
+            "state": "free",
+            "observed_at": 4.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              1,
+              0
+            ],
+            "state": "blocked",
+            "observed_at": 4.0,
+            "origin": 0
+          }
+        ],
+        "visible_agents": [],
+        "sensor_radius": 1,
+        "occlusion_model": "none"
+      }
+    },
+    {
+      "time": 4.0,
+      "kind": "DECISION",
+      "agent": 0,
+      "decision": {
+        "action_kind": "wait",
+        "next_vertex": [
+          0,
+          0
+        ],
+        "messages": []
+      }
+    },
+    {
+      "time": 4.0,
+      "kind": "ACTION_START",
+      "action": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 4.0,
+        "end_time": 5.0,
+        "action_id": 4
+      }
+    },
+    {
+      "time": 5.0,
+      "cycle": 0,
+      "phase": 0,
+      "sequence": 15,
+      "kind": "ACTION_FINISH",
+      "payload": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 4.0,
+        "end_time": 5.0,
+        "action_id": 4
+      }
+    },
+    {
+      "time": 5.0,
+      "cycle": 0,
+      "phase": 2,
+      "sequence": 16,
+      "kind": "SENSE",
+      "payload": 0
+    },
+    {
+      "time": 5.0,
+      "cycle": 0,
+      "phase": 3,
+      "sequence": 17,
+      "kind": "DECIDE",
+      "payload": {
+        "ego_id": 0,
+        "event_time": 5.0,
+        "ego_pose": [
+          0,
+          0
+        ],
+        "visible_cells": [
+          {
+            "cell": [
+              0,
+              0
+            ],
+            "state": "free",
+            "observed_at": 5.0,
+            "origin": 0
+          },
+          {
+            "cell": [
+              1,
+              0
+            ],
+            "state": "blocked",
+            "observed_at": 5.0,
+            "origin": 0
+          }
+        ],
+        "visible_agents": [],
+        "sensor_radius": 1,
+        "occlusion_model": "none"
+      }
+    },
+    {
+      "time": 5.0,
+      "kind": "DECISION",
+      "agent": 0,
+      "decision": {
+        "action_kind": "wait",
+        "next_vertex": [
+          0,
+          0
+        ],
+        "messages": []
+      }
+    },
+    {
+      "time": 5.0,
+      "kind": "ACTION_START",
+      "action": {
+        "agent_id": 0,
+        "source": [
+          0,
+          0
+        ],
+        "target": [
+          0,
+          0
+        ],
+        "start_time": 5.0,
+        "end_time": 6.0,
+        "action_id": 5
+      }
+    },
+    {
+      "time": 5,
+      "cycle": 0,
+      "phase": 4,
+      "sequence": 1,
+      "kind": "EPISODE_TIMEOUT",
+      "payload": null
+    }
+  ],
+  "network_trace": [],
+  "occupancy": [
+    {
+      "agent_id": 0,
+      "resources": [
+        [
+          0,
+          0
+        ]
+      ],
+      "start": 0,
+      "end": 1.0,
+      "edge": null
+    },
+    {
+      "agent_id": 0,
+      "resources": [
+        [
+          0,
+          0
+        ]
+      ],
+      "start": 1.0,
+      "end": 2.0,
+      "edge": null
+    },
+    {
+      "agent_id": 0,
+      "resources": [
+        [
+          0,
+          0
+        ]
+      ],
+      "start": 2.0,
+      "end": 3.0,
+      "edge": null
+    },
+    {
+      "agent_id": 0,
+      "resources": [
+        [
+          0,
+          0
+        ]
+      ],
+      "start": 3.0,
+      "end": 4.0,
+      "edge": null
+    },
+    {
+      "agent_id": 0,
+      "resources": [
+        [
+          0,
+          0
+        ]
+      ],
+      "start": 4.0,
+      "end": 5.0,
+      "edge": null
+    }
+  ],
+  "scenario": {
+    "name": "hidden_disconnection",
+    "seed": null,
+    "meta": {},
+    "grid": {
+      "name": "grid",
+      "width": 3,
+      "height": 1,
+      "obstacles": [
+        [
+          1,
+          0
+        ]
+      ]
+    },
+    "starts": [
+      [
+        0,
+        0
+      ]
+    ],
+    "goals": [
+      [
+        2,
+        0
+      ]
+    ]
+  },
+  "config": {
+    "horizon": 5,
+    "sensor_radius": 1,
+    "durations": [
+      1.0
+    ],
+    "duration_seed": 0,
+    "duration_jitter": 0.0,
+    "wait_duration": 1.0,
+    "max_events": 100000,
+    "network": {
+      "seed": 0,
+      "radius": 3,
+      "min_latency": 0.0,
+      "max_latency": 0.0,
+      "loss": 0.0,
+      "duplication": 0.0
+    }
+  }
+}

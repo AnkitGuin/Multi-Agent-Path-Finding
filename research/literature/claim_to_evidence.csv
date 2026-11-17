@@ -1,0 +1,7 @@
+claim,status,evidence,competing_prior_work,required_next
+"Original first-arrival goal semantics violated","measured","research/reports/original_tests.xml; baseline/subset.jsonl","legacy project","full-suite recertification after repair"
+"New simulator has deterministic replay on analytic fixtures","bounded validation","results/async/validation/manifest.json; final_tests.xml","not an algorithmic novelty claim","expand to authenticated baseline trajectories"
+"Freshness reduces waiting without harming completion","hypothesis only","none","PIBT; Causal-PIBT; LSRP; communication policies","matched baseline experiments and uncertainty analysis"
+"Unknown-map online replanning is new","rejected broad claim","primary source matrix","Shofer 2023; Malka 2024; MAGIC 2026","narrow research question"
+"Selective or local messaging alone is new","rejected broad claim","primary source matrix","SCRIMP; LC-MAPF; DMM","identify distinct protocol and matched ablation"
+"Unconditional safety and progress under packet loss","unsupported","none","conditional guarantees in closest work","define restricted assumptions and prove or explicitly disclaim"
