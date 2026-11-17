@@ -1,0 +1,15 @@
+{
+  "rows": 1380,
+  "exact_status_soc_matches": 1320,
+  "status_transitions": {
+    "conflict->conflict": 302,
+    "no_solution->no_solution": 3,
+    "ok->no_solution": 1,
+    "ok->ok": 872,
+    "ok->timeout": 12,
+    "timeout->ok": 1,
+    "timeout->timeout": 189
+  },
+  "invalid_runs": 0,
+  "caution": "10-second timeouts depend on host load; asynchronous study overlapped the final legacy suite. Cost differences are success-conditioned; no universal ranking."
+}

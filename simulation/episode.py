@@ -72,6 +72,7 @@ def run_episode(scenario: Scenario, policies: tuple[LocalPolicy, ...],
     queue = EventQueue()
     network = Network(queue, config.network)
     inbox = {i: [] for i in range(n)}
+    contacts = {i: set() for i in range(n)}
     arrivals = {i: 0.0 for i in range(n) if scenario.starts[i] == scenario.goals[i]}
     log, intervals = [], []
     last_end = dict.fromkeys(range(n), 0.0)
@@ -83,7 +84,7 @@ def run_episode(scenario: Scenario, policies: tuple[LocalPolicy, ...],
     error = None
     wall_start = time.perf_counter()
     for i in range(n):
-        if i not in arrivals:
+        if i not in arrivals or getattr(policies[i], "service_at_goal", False):
             queue.schedule(0, Phase.SENSE, "SENSE", i)
     queue.schedule(config.horizon, Phase.TIMEOUT, "EPISODE_TIMEOUT")
     count = 0
@@ -106,6 +107,7 @@ def run_episode(scenario: Scenario, policies: tuple[LocalPolicy, ...],
         if event.kind == "MESSAGE_DELIVER":
             network.delivered(event.payload)
             inbox[event.payload.recipient].append(event.payload)
+            contacts[event.payload.recipient].add(event.payload.sender)
         elif event.kind == "ACTION_FINISH":
             action = event.payload
             if world.finish(action, queue.now):
@@ -114,8 +116,8 @@ def run_episode(scenario: Scenario, policies: tuple[LocalPolicy, ...],
                     distance[i] += 1
                     moving_time[i] += action.end_time - action.start_time
                 if action.target == scenario.goals[i]:
-                    arrivals[i] = queue.now
-                else:
+                    arrivals.setdefault(i, queue.now)
+                if i not in arrivals or getattr(policies[i], "service_at_goal", False):
                     queue.schedule(queue.now, Phase.SENSE, "SENSE", i)
         elif event.kind == "SENSE":
             obs = sense(world, event.payload, queue.now, config.sensor_radius)
@@ -123,6 +125,7 @@ def run_episode(scenario: Scenario, policies: tuple[LocalPolicy, ...],
         elif event.kind == "DECIDE":
             obs = event.payload
             i = obs.ego_id
+            contacts[i].update(a.agent_id for a in obs.visible_agents)
             started = time.process_time()
             try:
                 decision = policies[i].decide(obs, tuple(inbox[i]))
@@ -137,15 +140,17 @@ def run_episode(scenario: Scenario, policies: tuple[LocalPolicy, ...],
                             decision=jsonable(decision)))
             try:
                 for outgoing in decision.messages:
-                    # Only a directly observed peer ID may be addressed in v0.1.
-                    peers = {a.agent_id for a in obs.visible_agents}
-                    if outgoing.recipient not in peers:
-                        raise ValueError("message recipient was not locally observed")
+                    # v0.2 permits release/ACK retries to legitimately remembered
+                    # peers. Transport still tests actual send-time range.
+                    if outgoing.recipient not in contacts[i]:
+                        raise ValueError("message recipient was never locally learned")
                     network.send(i, outgoing.recipient, outgoing.kind,
                                  json.loads(outgoing.payload_json), obs.ego_pose,
                                  world.positions[outgoing.recipient])
                 if decision.action_kind not in ("move", "wait"):
                     raise ValueError("unknown action kind")
+                if i in arrivals and decision.action_kind != "wait":
+                    raise ValueError("permanent goal cannot be vacated")
                 target = decision.next_vertex if decision.action_kind == "move" else obs.ego_pose
                 if target is None or (decision.action_kind == "move" and target == obs.ego_pose):
                     raise ValueError("move requires a distinct target")
@@ -199,7 +204,7 @@ def run_episode(scenario: Scenario, policies: tuple[LocalPolicy, ...],
     status = "collision" if collisions else "agent_error" if error else "success" if all_done else "timeout"
     elapsed = [arrivals.get(i, ended) for i in range(n)]
     waits = [max(0.0, elapsed[i] - moving_time[i]) for i in range(n)]
-    result = dict(schema_version=1, model="duration_resources_v0.1",
+    result = dict(schema_version=1, model="duration_resources_v0.2.1",
                   scenario_hash=digest(scenario.to_dict()), config_hash=digest(config),
                   termination_reason=status, error=error, completed_agents=len(arrivals),
                   completion_fraction=len(arrivals)/n, agent_count=n, elapsed_time=ended,
@@ -213,7 +218,8 @@ def run_episode(scenario: Scenario, policies: tuple[LocalPolicy, ...],
                   planning_cpu_seconds=cpu, sim_wall_seconds=time.perf_counter()-wall_start,
                   messages_sent=network.messages_sent, messages_delivered=network.messages_delivered,
                   bytes_sent=network.bytes_sent, bytes_delivered=network.bytes_delivered,
-                  method=method, oracle_access=oracle_access, replan_count=None, peak_memory=None,
+                  method=method, oracle_access=oracle_access,
+                  replan_count=sum(getattr(p, "replans", 0) for p in policies), peak_memory=None,
                   events=log, network_trace=jsonable(network.trace),
                   occupancy=jsonable(intervals), scenario=scenario.to_dict(), config=jsonable(config))
     return result

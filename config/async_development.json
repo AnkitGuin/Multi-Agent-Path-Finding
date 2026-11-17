@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "purpose": "development baseline and protocol boundary study; not final holdout",
+  "methods": ["local_independent", "observed_yield", "claims_periodic", "claims_always", "claims_selective", "claims_no_map", "claims_full_replan"],
+  "families": ["open", "random", "rooms", "maze", "corridor", "doorway", "hidden_wall"],
+  "seeds": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "agent_counts": [5],
+  "size": 16,
+  "settings": {"horizon": 40, "sensor_radius": 2, "network_radius": 3, "wait_duration": 0.5, "broadcast_period": 2, "freshness": 4},
+  "faults": [
+    {"name": "reliable", "latency": 0, "loss": 0, "jitter": 0},
+    {"name": "delayed", "latency": 1, "loss": 0, "jitter": 1},
+    {"name": "lossy", "latency": 2, "loss": 0.2, "jitter": 2, "duplication": 0.2}
+  ]
+}

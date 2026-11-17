@@ -1,0 +1,55 @@
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cstdlib:75:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ext\string_conversions.h:41,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5402,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:52,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\stdexcept:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\array:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\tuple:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\unordered_set:41,
+                 from D:\Multi Agent Path Finding\mapf\external\lsrp\source\graph_io.cpp:3:
+c:\mingw\include\stdlib.h: In function 'int raplab::LoadSparseGraphDIMAC(std::vector<std::__cxx11::basic_string<char> >, raplab::SparseGraph*)':
+c:\mingw\include\stdlib.h:364:8: error: inlining failed in call to always_inline 'double strtod(const char*, char**)': indirect function call with a yet undetermined callee
+ double strtod (const char *__restrict__ __nptr, char **__restrict__ __endptr)
+        ^~~~~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5402:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:52,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\stdexcept:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\array:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\tuple:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\unordered_set:41,
+                 from D:\Multi Agent Path Finding\mapf\external\lsrp\source\graph_io.cpp:3:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ext\string_conversions.h:68:62: note: called from here
+       const _TRet __tmp = __convf(__str, &__endptr, __base...);
+                                                              ^
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\cstdlib:75:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ext\string_conversions.h:41,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5402,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:52,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\stdexcept:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\array:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\tuple:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\unordered_set:41,
+                 from D:\Multi Agent Path Finding\mapf\external\lsrp\source\graph_io.cpp:3:
+c:\mingw\include\stdlib.h:364:8: error: inlining failed in call to always_inline 'double strtod(const char*, char**)': indirect function call with a yet undetermined callee
+ double strtod (const char *__restrict__ __nptr, char **__restrict__ __endptr)
+        ^~~~~~
+In file included from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\bits\basic_string.h:5402:0,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\string:52,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\stdexcept:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\array:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\tuple:39,
+                 from c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\unordered_set:41,
+                 from D:\Multi Agent Path Finding\mapf\external\lsrp\source\graph_io.cpp:3:
+c:\mingw\lib\gcc\mingw32\6.3.0\include\c++\ext\string_conversions.h:68:62: note: called from here
+       const _TRet __tmp = __convf(__str, &__endptr, __base...);
+                                                              ^
+In file included from D:\Multi Agent Path Finding\mapf\external\lsrp\source\mapfaa_lsrp.cpp:6:0:
+D:\Multi Agent Path Finding\mapf\external\lsrp\include/mapfaa_lsrp.hpp:15:20: fatal error: optional: No such file or directory
+ #include <optional>
+                    ^
+compilation terminated.
+In file included from D:\Multi Agent Path Finding\mapf\external\lsrp\test\test_toyexample.cpp:5:0:
+D:\Multi Agent Path Finding\mapf\external\lsrp\include/mapfaa_lsrp.hpp:15:20: fatal error: optional: No such file or directory
+ #include <optional>
+                    ^
+compilation terminated.

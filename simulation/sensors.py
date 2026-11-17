@@ -20,7 +20,8 @@ def sense(world: World, agent_id: int, now: float, radius: int) -> Observation:
     visible = frozenset(cells)
     facts = tuple(CellFact(c, "blocked" if world.grid.is_blocked(c) else "free",
                            now, agent_id) for c in cells)
-    neighbors = tuple(VisibleAgent(i, tuple(sorted(world.occupied(i))), i in world.active)
+    neighbors = tuple(VisibleAgent(i, tuple(sorted(world.occupied(i))),
+                                   i in world.active and world.active[i].moving)
                       for i in sorted(world.positions) if i != agent_id
                       and world.occupied(i) & visible)
     return Observation(agent_id, now, (x, y), facts, neighbors, radius)

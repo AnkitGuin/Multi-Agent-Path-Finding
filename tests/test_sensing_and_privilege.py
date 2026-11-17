@@ -55,3 +55,11 @@ def test_unsensed_entry_and_wall_entry_are_rejected():
         w.start(0, (1, 0), 0, 1, frozenset())
     with pytest.raises(ValueError, match="blocked"):
         w.start(0, (2, 0), 0, 1, frozenset(((2, 0),)))
+
+
+def test_waiting_neighbor_is_stationary_even_during_an_active_wait_action():
+    world = World(GridMap(3, 1), ((0, 0), (1, 0)))
+    world.start(1, (1, 0), 0, 2, frozenset(((1, 0),)))
+    neighbor, = sense(world, 0, 1, 1).visible_agents
+    assert not neighbor.moving
+    assert neighbor.occupied_cells == ((1, 0),)

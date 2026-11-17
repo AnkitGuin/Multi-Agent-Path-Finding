@@ -114,12 +114,21 @@ ROWS = [
 
 def main():
     directory = ROOT / "research/literature"
+    for row in ROWS:
+        if row["id"] == "okumura2019pibt":
+            row["verified_notes"] += "; 2026-11-17: author Python AIJ-version code audited and vendored unchanged; 8 upstream tests and 20 native runs passed; vacatable-goal semantics recorded"
+        elif row["id"] == "okumura2021causal":
+            row["communication"] = "atomic interacting-agent updates; arbitrary packet implementation not specified"
+            row["execution_architecture"] = "native known-graph atomic activation; vacatable goals"
+            row["verified_notes"] += "; 2026-11-17: algorithm/code/activation assumptions inspected; original C++ built; 20 native traces independently checked"
+        elif row["id"] == "zhou2025lsrp":
+            row["verified_notes"] += "; 2026-11-17: original source audited; GCC6.3 build failed; conflicting README license statements; not reproduced"
     with (directory/"literature_matrix.csv").open("w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, FIELDS)
         writer.writeheader()
         writer.writerows({key: row.get(key, "unverified") for key in FIELDS} for row in ROWS)
     (directory/"source_review_manifest.json").write_text(json.dumps(
-        dict(checked_date="2026-11-16", rows=ROWS,
+        dict(checked_date="2026-11-17", rows=ROWS,
              review_status="partial; primary identities checked, not a full-text systematic review"), indent=2), encoding="utf-8")
     print(f"wrote {len(ROWS)} checked primary-source records")
 

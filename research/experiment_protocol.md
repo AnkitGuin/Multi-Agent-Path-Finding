@@ -1,4 +1,14 @@
-# Experimental protocol draft — not a final evaluation
+# Experimental protocol — development only, not final evaluation
+
+2026-11-17 update: the committed `config/async_development.json` now defines
+1,470 paired local runs and control ablations. The authoritative run manifest
+stores the executed config/source hashes. All outcomes/replays are retained and
+checked independently; Wilson condition intervals and 2,000-draw map-cluster
+bootstrap differences are generated from raw records. Native references are
+separate. No hyperparameter search or final holdout was performed. See the
+generated development report and reproduction instructions.
+
+## Original preregistration notes (before the development run)
 
 Current executable data are six analytic simulator fixtures, not a baseline
 comparison. Scripts supplied by the evaluator are explicitly `oracle_access=true`

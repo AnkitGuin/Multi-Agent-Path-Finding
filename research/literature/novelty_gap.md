@@ -15,9 +15,11 @@ and messaging parts. A new combination is not evidence of a new mechanism.
 | [LC-MAPF](https://arxiv.org/pdf/2605.07637), problem formulation | learned multi-round local coordination | match information and transport assumptions before empirical comparison |
 | [DMM](https://arxiv.org/abs/2609.32019) | intent refinement before action | full-text assumptions still unverified |
 
-Provisional direction: a controlled descriptive study of when stale information
-increases waiting versus invalid attempted actions at local bottlenecks. This
-is a question, not a priority claim. No candidate protocol has been tuned, no
-contemporary baseline reproduced, and no improvement measured. There is no basis
-for a methods manuscript yet. Finish source/code review and author assessment,
-then either specify a distinct mechanism or pursue a reproducibility benchmark.
+Update 2026-11-17: see `code_assumption_audit.md` and
+`../reports/development_results.md`. Native PIBT/Causal-PIBT are reproduced and
+a standard local claim/reporting prototype has been evaluated. It is not an
+independently distinct new method. Development byte savings do not establish a
+waiting/travel improvement, and progress remains poor. G1 and the improvement
+gate remain unpassed. A descriptive reproducibility/boundary study is the honest
+current outcome; modern matched baselines and progress recovery precede any
+methods manuscript or final-holdout claim.

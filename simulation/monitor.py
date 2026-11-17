@@ -1,6 +1,6 @@
 """Independent interval sweep: never consults policies or their reservations."""
 from dataclasses import dataclass
-from itertools import combinations
+import heapq
 from agents.interfaces import Cell
 
 
@@ -29,17 +29,26 @@ Intervals are half-open; a handoff at an actual completion is permissible.
 These are abstract resource conflicts, not measured robot body penetration.
 """
     found = []
-    for a, b in combinations(intervals, 2):
-        if a.agent_id == b.agent_id:
+    active, ends = {}, []
+    for identifier, b in sorted(enumerate(intervals), key=lambda item: (item[1].start, item[0])):
+        while ends and ends[0][0] <= b.start:
+            _, old = heapq.heappop(ends)
+            active.pop(old, None)
+        if b.end <= b.start:
             continue
-        start, end = max(a.start, b.start), min(a.end, b.end)
-        shared = a.resources & b.resources
-        if start >= end or not shared:
-            continue
-        edge = a.edge is not None and b.edge == a.edge[::-1]
-        found.append(Collision(tuple(sorted((a.agent_id, b.agent_id))), start, end,
-                               "opposite_edge" if edge else "vertex_resource",
-                               tuple(sorted(shared))))
+        for a in active.values():
+            if a.agent_id == b.agent_id:
+                continue
+            start, end = b.start, min(a.end, b.end)
+            shared = a.resources & b.resources
+            if not shared:
+                continue
+            edge = a.edge is not None and b.edge == a.edge[::-1]
+            found.append(Collision(tuple(sorted((a.agent_id, b.agent_id))), start, end,
+                                   "opposite_edge" if edge else "vertex_resource",
+                                   tuple(sorted(shared))))
+        active[identifier] = b
+        heapq.heappush(ends, (b.end, identifier))
     merged: list[Collision] = []
     for item in sorted(found, key=lambda c: (c.agents, c.kind, c.cells, c.start, c.end)):
         if (merged and (merged[-1].agents, merged[-1].kind, merged[-1].cells)

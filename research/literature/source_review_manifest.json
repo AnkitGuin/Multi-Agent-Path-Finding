@@ -1,5 +1,5 @@
 {
-  "checked_date": "2026-11-16",
+  "checked_date": "2026-11-17",
   "rows": [
     {
       "id": "stern2019",
@@ -76,7 +76,7 @@
       "async_actions": "no in this model",
       "formal_guarantee": "conditional graph-cycle reachability",
       "closest_overlap": "priority and backtracking",
-      "verified_notes": "2026-11-16: primary model/communication/theorem sections inspected; full proof/code audit pending"
+      "verified_notes": "2026-11-16: primary model/communication/theorem sections inspected; full proof/code audit pending; 2026-11-17: author Python AIJ-version code audited and vendored unchanged; 8 upstream tests and 20 native runs passed; vacatable-goal semantics recorded"
     },
     {
       "id": "damani2021primal2",
@@ -140,7 +140,9 @@
       "collision_model": "extended head/tail occupancy",
       "formal_guarantee": "biconnected graph and agents fewer than vertices; other scheduler assumptions must be audited",
       "closest_overlap": "asynchronous commitment",
-      "verified_notes": "2026-11-16: model and theorem 2 inspected; full scheduler/proof audit pending"
+      "verified_notes": "2026-11-16: model and theorem 2 inspected; full scheduler/proof audit pending; 2026-11-17: algorithm/code/activation assumptions inspected; original C++ built; 20 native traces independently checked",
+      "communication": "atomic interacting-agent updates; arbitrary packet implementation not specified",
+      "execution_architecture": "native known-graph atomic activation; vacatable goals"
     },
     {
       "id": "zhou2025lsrp",
@@ -157,7 +159,7 @@
       "async_actions": "positive edge durations; shared clock",
       "collision_model": "duration endpoint conflicts",
       "closest_overlap": "asynchronous PIBT-derived coordination",
-      "verified_notes": "2026-11-16: sections 2-4 inspected; not evidence of delayed/lossy decentralized deployment"
+      "verified_notes": "2026-11-16: sections 2-4 inspected; not evidence of delayed/lossy decentralized deployment; 2026-11-17: original source audited; GCC6.3 build failed; conflicting README license statements; not reproduced"
     },
     {
       "id": "shofer2023ou",

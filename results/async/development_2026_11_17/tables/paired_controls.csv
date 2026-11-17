@@ -1,0 +1,17 @@
+method_a,method_b,metric,all_episode_pairs,distinct_maps,mean_a_minus_b,map_bootstrap_low,map_bootstrap_high,discordant_success_pairs
+claims_selective,claims_periodic,bytes_sent,210,34,-58896.44761904762,-85569.76282051283,-42341.62857142857,1
+claims_selective,claims_periodic,executed_time_soc,210,34,-0.13309978213906343,-0.35834556729747846,0.004901960784313725,1
+claims_selective,claims_periodic,total_wait_time,210,34,-0.18199301055434164,-0.6183236959252462,0.25432525358422536,1
+claims_selective,claims_periodic,completion_fraction,210,34,0.005714285714285714,0.0,0.015151515151515152,1
+claims_selective,claims_always,bytes_sent,210,34,-423681.79047619045,-636529.1346153846,-306811.09621993126,1
+claims_selective,claims_always,executed_time_soc,210,34,0.18567452619417274,-0.02185792349726776,0.5379759595348992,1
+claims_selective,claims_always,total_wait_time,210,34,0.10450422680080113,-0.33866006182555275,0.5707939052011362,1
+claims_selective,claims_always,completion_fraction,210,34,-0.004761904761904762,-0.013745704467353952,0.0,1
+claims_selective,claims_no_map,bytes_sent,210,34,84798.50476190477,58111.9282700422,139227.82945736434,5
+claims_selective,claims_no_map,executed_time_soc,210,34,-0.11154593913124473,-0.8008050420295527,0.4709658817226184,5
+claims_selective,claims_no_map,total_wait_time,210,34,-1.672477242842689,-5.6088112816328595,0.474586310507884,5
+claims_selective,claims_no_map,completion_fraction,210,34,0.008571428571428572,-0.000757575757575758,0.024472573839662448,5
+claims_selective,claims_full_replan,bytes_sent,210,34,-12044.576190476191,-31140.79487179487,-2419.253164556962,6
+claims_selective,claims_full_replan,executed_time_soc,210,34,-0.46358680614302245,-1.4518762851766507,0.2569035935727873,6
+claims_selective,claims_full_replan,total_wait_time,210,34,-2.0375751828056328,-3.7371707316142944,-0.5974470428366686,6
+claims_selective,claims_full_replan,completion_fraction,210,34,0.018095238095238095,0.001159420289855071,0.03875968992248062,6

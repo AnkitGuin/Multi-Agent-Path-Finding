@@ -1,4 +1,11 @@
-# Partial-map asynchronous model v0.1
+# Partial-map asynchronous model v0.2.1
+
+Version update (2026-11-17): waiting neighbors are stationary even during active
+wait actions. Claims-policy agents service messages at goals while retaining
+their first-arrival cost and permanent occupancy. Legitimately remembered peer
+contacts can receive retries; physical send-time range still applies. These
+extend the initial v0.1 formulation below. Runtime baseline code and data use
+v0.2.1; original first-session traces retain their historical model label.
 
 Status: engineering model for validation, not a frozen final study. No learning
 or training is implemented. The legacy planners remain centralized references.

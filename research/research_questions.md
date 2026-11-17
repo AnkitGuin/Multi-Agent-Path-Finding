@@ -36,3 +36,8 @@ Go/no-go: M0 audit required before relying on old numbers; G1 requires precise
 differences and author review; G2 interval/clock validation; G3 strong authentic
 baselines; G4 reproducible matched-condition effect or useful negative result;
 G5 ablations/holdout/review. Manuscript and optional learning await these gates.
+
+Evaluation note (2026-11-17; hypotheses above retained): development results do
+not support H1's waiting benefit. H4 has measured byte savings in the tested
+controls, which alone are not novel. H2 is unconfirmed and H3 was not tested.
+Full report: `reports/development_results.md`. No final holdout was inspected.

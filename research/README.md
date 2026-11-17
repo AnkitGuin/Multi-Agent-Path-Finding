@@ -1,15 +1,21 @@
-# Research extension: audit and simulator foundation
+# Research extension: baselines, local claims and development evidence
 
-This branch executes the initial dependency stages of [instructions.md](../instructions.md).
-It does **not** complete the entire research/publication roadmap. There is no
-proposed freshness algorithm, reproduced strong decentralized baseline,
-comparative improvement, safety theorem or manuscript yet.
+This branch executes [instructions.md](../instructions.md) in dependency order.
+The full legacy recertification, native references, local claim controls and
+development comparisons now have reproducible evidence. The entire research
+roadmap is **not complete**: novelty and a reliable waiting improvement are not
+established, so final holdout/manuscript gates remain closed.
 
 Implemented: deterministic real-time events, heterogeneous/jittered durations,
 explicit duration-resource occupancy, independent conflict monitor, immutable
 local sensing, timestamped beliefs, seeded local message loss/latency/duplicates,
 serialized bytes, saved authoritative traces and independent metric replay.
 The original goal-commitment bug is repaired with original evidence preserved.
+
+Latest: [measured development report](reports/development_results.md),
+[baseline comparison](baselines.md), [protocol](protocol_spec.md),
+[reproduction commands](reproduction.md), and [internal review](protocol_safety_review.md).
+Current suite: **275 passing tests**, plus eight upstream PIBT tests separately.
 
 Read [progress](progress.md), [audit](original_project_audit.md),
 [model](problem_formulation.md), [architecture](architecture.md),
@@ -41,9 +47,9 @@ To rerun the bounded original suite subset on current code:
 .\.venv\Scripts\python.exe scripts/audit_original.py --out research/reports/local-baseline
 ```
 
-This selects one instance per suite, not a full experiment. The existing
-`results/raw` and historical report are retained. Full report recertification
-requires a new complete run, outside this bounded audit.
+This selects one instance per suite. The full 1,380-job rerun and per-job
+comparison are in `results/recertified_2026_11_17`, with zero invalid plans.
+Existing `results/raw`, tables/figures and historical REPORT remain unchanged.
 
 ## Replay
 
@@ -53,8 +59,14 @@ occupancy intervals and metrics. `evaluation.replay_async.verify_replay` checks
 saved files without invoking policies. The six scripted fixtures are privileged
 test guidance (`oracle_access=true`), **not** matched local algorithm results.
 
+Development summaries, compressed full replays, manifest, all-outcome tables
+and figures are in `results/async/development_2026_11_17`. Native prior-work
+runs are separate in `results/native_2026_11_17` because their information,
+goal and timing assumptions differ.
+
 Limitations: abstract resource conflicts, exact sensors/localization, shared
-clock, no wall occlusion, only stationary sensing, no distributed ownership
-protocol, no deadlock proof, no adversarial Python sandbox. Unmeasured metrics
+clock, no wall occlusion, stationary decision sensing, no progress/deadlock
+proof, no adversarial Python sandbox. Local claims require sensing >=2 hops.
+Unmeasured metrics
 are null. A frozen final evaluation remains dependent on G1/G3 and licensed
 layout hashes; the holdout JSON only reserves a future split.

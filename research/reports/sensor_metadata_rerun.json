@@ -1,0 +1,16 @@
+{
+  "initial_model": "duration_resources_v0.2",
+  "corrected_model": "duration_resources_v0.2.1",
+  "corrected_episodes": 1470,
+  "compared_fields": [
+    "termination_reason",
+    "completion_fraction",
+    "collision_count",
+    "executed_time_soc",
+    "bytes_sent",
+    "total_wait_time"
+  ],
+  "metric_differences": 0,
+  "initial_archive": "external/superseded_study_2026_11_17 (local ignored archive)",
+  "reason": "wait actions are stationary; models and raw observation logs are kept distinct"
+}

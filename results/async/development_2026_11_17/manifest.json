@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "utc_timestamp": "2026-11-17T06:35:23.017583+00:00",
+  "git_sha": "4a3be0aab5861ec2e876a384acd70d77b7834860",
+  "command": [
+    "scripts/run_async.py",
+    "--config",
+    "config/async_development.json",
+    "--out",
+    "results/async/development_2026_11_17"
+  ],
+  "config": {
+    "schema_version": 1,
+    "purpose": "development baseline and protocol boundary study; not final holdout",
+    "methods": [
+      "local_independent",
+      "observed_yield",
+      "claims_periodic",
+      "claims_always",
+      "claims_selective",
+      "claims_no_map",
+      "claims_full_replan"
+    ],
+    "families": [
+      "open",
+      "random",
+      "rooms",
+      "maze",
+      "corridor",
+      "doorway",
+      "hidden_wall"
+    ],
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "agent_counts": [
+      5
+    ],
+    "size": 16,
+    "settings": {
+      "horizon": 40,
+      "sensor_radius": 2,
+      "network_radius": 3,
+      "wait_duration": 0.5,
+      "broadcast_period": 2,
+      "freshness": 4
+    },
+    "faults": [
+      {
+        "name": "reliable",
+        "latency": 0,
+        "loss": 0,
+        "jitter": 0
+      },
+      {
+        "name": "delayed",
+        "latency": 1,
+        "loss": 0,
+        "jitter": 1
+      },
+      {
+        "name": "lossy",
+        "latency": 2,
+        "loss": 0.2,
+        "jitter": 2,
+        "duplication": 0.2
+      }
+    ]
+  },
+  "config_hash": "8bf7683ee0a178b1e4d3be1d15c7a37a512738fb216a7cfbe33dcce33a75c13d",
+  "source_hashes": {
+    "agents/belief.py": "f6fa6c95537eff306b0e2a01519c024b8d4c4373b1efac66c5c955834fb2643b",
+    "agents/interfaces.py": "a96410dfa03668304997bdbe7f455d5ed3618b187252574b36ba3b3a4bbd8066",
+    "agents/local_search.py": "f5b97b1e5b64ee3c40183eda13351e4a10ad4c46cf74ec3d37f5935bf2da7e88",
+    "agents/protocols.py": "b363d8909a6ac5c8df7aaca0716c393f77638fbc1b5b0af38a84a28828e7ed9b",
+    "agents/__init__.py": "ff4c6e7efedab5542ea3d0289dfb85989ebd867a4c103c72ecdd0ee339d126aa",
+    "baselines/local_independent.py": "1d90b9c407408a6c14567094ecba34009f83ddb2098d4a801ff982131bde754a",
+    "baselines/local_reservation.py": "8cdd7f4944f5110e6ba870c067ce82329592d4644d038f7d21cf9e5994e890bf",
+    "baselines/pibt_native.py": "e83a1ac7f1c205b5cbce8e01400ec7dbb5a1ad5bd1eb00e2d45ccce8c57682f1",
+    "baselines/__init__.py": "5e66d7ee4d6d583af4c9b74f4dbf1e2076b9a6fa15f2b8f56b54d641f931282b",
+    "simulation/actions.py": "c6b08e48166673b85309107e683d6d13db38eabe8b86685746d7270fd6e88de3",
+    "simulation/communication.py": "cd327dc9a0fed34fe638bbf3c0aeb43f2b4e49cda5d189ee92f6e4be1371ad01",
+    "simulation/episode.py": "744aa65a13e22c9444d87dcec02815cd24ac66d34cb7d9cfbd6978aad27ab348",
+    "simulation/events.py": "67cd6788729c2a0af197d5cd81940f9e0ecb036e48e2e5026fc85a4c8cfb52bf",
+    "simulation/fixtures.py": "a011d6bd1ea342464d4c6a1409efd90cda3303ca37accc77bbffb41ed74f90ff",
+    "simulation/monitor.py": "98f542cd272a0f38db007cbb0727f73f00bce900b249ebb2a1c1fd20ad292dae",
+    "simulation/sensors.py": "dbd05f2e67e0f91d3c03dd071678014f9f9aadffb94365dfab70f9889f881a0f",
+    "simulation/world.py": "766792441d291320eb0af852a9ef1894d1db76b646c9ce04d02ba6cca7dc9f77",
+    "simulation/__init__.py": "ef9ccae9b6471dcf04f5f86bd9ec035df1f9e7d14f18f504c2cde673247cc46b",
+    "evaluation/adaptive.py": "b4f1dcf0b824dd050e1adb80fe0470766d34c65caa14101904420551caf741fe",
+    "evaluation/experiments.py": "5aa4d2e7700db13722be7aef439361c4ad158844ca11c63dc950e6b75e9ffb6d",
+    "evaluation/metrics.py": "5bef9d07b57d55574787093a7ab889871b0ee9f54f504220de2234dfc97b0e49",
+    "evaluation/replay_async.py": "d01b348b6582bdd27413fa0289989edad414d41e0d0e4ddddce5cdb8ab90aa8c",
+    "evaluation/runners_async.py": "9837c37a6be4f4d6497bd48fe0f2bae6916bb38d2a625b6a7846d29bca5557d2",
+    "evaluation/scenario_registry.py": "2bcbb39c914efa9105ff0a76d68cbf2a0bb1aed23d33ac6390a170b78207e654",
+    "evaluation/statistics.py": "ad4b719f9320e050a41fe0d0a5a4af0aafe7312255ec33d3f2a2589163aa171e",
+    "evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "python": "3.13.3 (tags/v3.13.3:6280bb5, Apr  8 2025, 14:47:33) [MSC v.1943 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26300-SP0",
+  "source_lf_hashes": {
+    "agents/belief.py": "f6fa6c95537eff306b0e2a01519c024b8d4c4373b1efac66c5c955834fb2643b",
+    "agents/interfaces.py": "a96410dfa03668304997bdbe7f455d5ed3618b187252574b36ba3b3a4bbd8066",
+    "agents/local_search.py": "f5b97b1e5b64ee3c40183eda13351e4a10ad4c46cf74ec3d37f5935bf2da7e88",
+    "agents/protocols.py": "b363d8909a6ac5c8df7aaca0716c393f77638fbc1b5b0af38a84a28828e7ed9b",
+    "agents/__init__.py": "ff4c6e7efedab5542ea3d0289dfb85989ebd867a4c103c72ecdd0ee339d126aa",
+    "baselines/local_independent.py": "1d90b9c407408a6c14567094ecba34009f83ddb2098d4a801ff982131bde754a",
+    "baselines/local_reservation.py": "8cdd7f4944f5110e6ba870c067ce82329592d4644d038f7d21cf9e5994e890bf",
+    "baselines/pibt_native.py": "e83a1ac7f1c205b5cbce8e01400ec7dbb5a1ad5bd1eb00e2d45ccce8c57682f1",
+    "baselines/__init__.py": "5e66d7ee4d6d583af4c9b74f4dbf1e2076b9a6fa15f2b8f56b54d641f931282b",
+    "simulation/actions.py": "c6b08e48166673b85309107e683d6d13db38eabe8b86685746d7270fd6e88de3",
+    "simulation/communication.py": "cd327dc9a0fed34fe638bbf3c0aeb43f2b4e49cda5d189ee92f6e4be1371ad01",
+    "simulation/episode.py": "744aa65a13e22c9444d87dcec02815cd24ac66d34cb7d9cfbd6978aad27ab348",
+    "simulation/events.py": "67cd6788729c2a0af197d5cd81940f9e0ecb036e48e2e5026fc85a4c8cfb52bf",
+    "simulation/fixtures.py": "a011d6bd1ea342464d4c6a1409efd90cda3303ca37accc77bbffb41ed74f90ff",
+    "simulation/monitor.py": "98f542cd272a0f38db007cbb0727f73f00bce900b249ebb2a1c1fd20ad292dae",
+    "simulation/sensors.py": "dbd05f2e67e0f91d3c03dd071678014f9f9aadffb94365dfab70f9889f881a0f",
+    "simulation/world.py": "766792441d291320eb0af852a9ef1894d1db76b646c9ce04d02ba6cca7dc9f77",
+    "simulation/__init__.py": "ef9ccae9b6471dcf04f5f86bd9ec035df1f9e7d14f18f504c2cde673247cc46b",
+    "evaluation/adaptive.py": "b4f1dcf0b824dd050e1adb80fe0470766d34c65caa14101904420551caf741fe",
+    "evaluation/experiments.py": "5aa4d2e7700db13722be7aef439361c4ad158844ca11c63dc950e6b75e9ffb6d",
+    "evaluation/metrics.py": "5bef9d07b57d55574787093a7ab889871b0ee9f54f504220de2234dfc97b0e49",
+    "evaluation/replay_async.py": "d01b348b6582bdd27413fa0289989edad414d41e0d0e4ddddce5cdb8ab90aa8c",
+    "evaluation/runners_async.py": "9837c37a6be4f4d6497bd48fe0f2bae6916bb38d2a625b6a7846d29bca5557d2",
+    "evaluation/scenario_registry.py": "2bcbb39c914efa9105ff0a76d68cbf2a0bb1aed23d33ac6390a170b78207e654",
+    "evaluation/statistics.py": "ad4b719f9320e050a41fe0d0a5a4af0aafe7312255ec33d3f2a2589163aa171e",
+    "evaluation/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "final_holdout_executed": false,
+  "source_state": "working tree; exact package hashes recorded"
+}

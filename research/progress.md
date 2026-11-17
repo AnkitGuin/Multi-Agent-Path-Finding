@@ -1,4 +1,25 @@
-# Milestone checklist — 2026-11-16
+# Current milestone checklist — 2026-11-17
+
+| Milestone | Current state | Evidence / gate |
+|---|---|---|
+| M0 audit/recertification | full configured rerun done | 1,380 jobs; zero invalid; 1,320 historical status/SOC matches; originals retained |
+| M1 literature/gap | closest-code audit advanced; G1 unpassed | 15 records; atomic interactions/vacatable goals identified; no distinct new-method claim |
+| M2–M3 simulator/information | v0.2.1 implemented/tested | wait-sensor correction; goal message service; remembered contacts; scalable monitor |
+| M4 baselines | native references and matched local controls | 20 PIBT +20 Causal-PIBT runs; eight upstream tests; modern same-information baseline still missing |
+| M5 prototype | standard claims/reporting control implemented | epochs/promises/release/ACK; adversarial tests; no liveness or novelty claim |
+| M6 development/ablations | executed/analyzed | 1,470 runs; all failures/replays; fixed/always/selective/no-map/full-replan controls |
+| M7 final/scalability | gated, not executed | waiting benefit unestablished; holdout untouched; no 80-agent scaling claim |
+| M8 manuscript/submission | gated, not started | contribution/independent scientific review absent; optional learning deferred |
+
+Measured decisions: `reports/development_results.md`. Latest test evidence:
+`reports/session2_tests.xml` (275 passed). Native references are not treated as
+matched packet-loss/partial-map competitors. The next useful action is research
+redesign: add/audit progress recovery and a strong same-information comparator,
+then assess whether freshness adds value. Full review, LSRP/compiler/license
+work, final evaluation and paper remain uncompleted. G4 does not support the
+current waiting-efficiency claim.
+
+## Archived first-session snapshot — 2026-11-16 (superseded by the status above)
 
 The attached file is a multi-stage research specification, not proof of a
 completed contribution. This is the explicit first-session handoff it requests.

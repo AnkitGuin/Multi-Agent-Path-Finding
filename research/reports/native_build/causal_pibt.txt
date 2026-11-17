@@ -1,0 +1,267 @@
+In file included from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\agent.hpp:5:0,
+                 from D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\src\agent.cpp:1:
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:12:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:19:66: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& where, const std::string& msg)
+                                                                  ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:26:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void warn(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:67:59: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int from, int to, std::mt19937* MT) {
+                                                           ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:73:49: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int to, std::mt19937* MT) {
+                                                 ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:79:67: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static float getRandomFloat(float from, float to, std::mt19937* MT) {
+                                                                   ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:93:37: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+                              t_start)
+                                     ^
+In file included from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\agent.hpp:5:0,
+                 from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\causal_pibt.hpp:6,
+                 from D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\src\causal_pibt.cpp:1:
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:12:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:19:66: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& where, const std::string& msg)
+                                                                  ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:26:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void warn(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:67:59: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int from, int to, std::mt19937* MT) {
+                                                           ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:73:49: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int to, std::mt19937* MT) {
+                                                 ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:79:67: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static float getRandomFloat(float from, float to, std::mt19937* MT) {
+                                                                   ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:93:37: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+                              t_start)
+                                     ^
+In file included from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\agent.hpp:5:0,
+                 from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\causal_pibt.hpp:6,
+                 from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\causal_pibt_mapf.hpp:6,
+                 from D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\src\causal_pibt_mapf.cpp:1:
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:12:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:19:66: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& where, const std::string& msg)
+                                                                  ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:26:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void warn(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:67:59: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int from, int to, std::mt19937* MT) {
+                                                           ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:73:49: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int to, std::mt19937* MT) {
+                                                 ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:79:67: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static float getRandomFloat(float from, float to, std::mt19937* MT) {
+                                                                   ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:93:37: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+                              t_start)
+                                     ^
+In file included from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\agent.hpp:5:0,
+                 from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\fsp.hpp:6,
+                 from D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\src\fsp.cpp:1:
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:12:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:19:66: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& where, const std::string& msg)
+                                                                  ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:26:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void warn(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:67:59: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int from, int to, std::mt19937* MT) {
+                                                           ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:73:49: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int to, std::mt19937* MT) {
+                                                 ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:79:67: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static float getRandomFloat(float from, float to, std::mt19937* MT) {
+                                                                   ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:93:37: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+                              t_start)
+                                     ^
+In file included from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\agent.hpp:5:0,
+                 from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\greedy.hpp:6,
+                 from D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\src\greedy.cpp:1:
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:12:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:19:66: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& where, const std::string& msg)
+                                                                  ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:26:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void warn(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:67:59: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int from, int to, std::mt19937* MT) {
+                                                           ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:73:49: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int to, std::mt19937* MT) {
+                                                 ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:79:67: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static float getRandomFloat(float from, float to, std::mt19937* MT) {
+                                                                   ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:93:37: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+                              t_start)
+                                     ^
+In file included from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\agent.hpp:5:0,
+                 from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\problem.hpp:7,
+                 from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\mapf_random.hpp:2,
+                 from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\mapf_dp.hpp:10,
+                 from D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\src\mapf_dp.cpp:1:
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:12:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:19:66: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& where, const std::string& msg)
+                                                                  ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:26:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void warn(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:67:59: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int from, int to, std::mt19937* MT) {
+                                                           ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:73:49: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int to, std::mt19937* MT) {
+                                                 ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:79:67: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static float getRandomFloat(float from, float to, std::mt19937* MT) {
+                                                                   ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:93:37: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+                              t_start)
+                                     ^
+In file included from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\agent.hpp:5:0,
+                 from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\problem.hpp:7,
+                 from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\mapf_random.hpp:2,
+                 from D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\src\mapf_random.cpp:1:
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:12:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:19:66: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& where, const std::string& msg)
+                                                                  ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:26:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void warn(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:67:59: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int from, int to, std::mt19937* MT) {
+                                                           ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:73:49: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int to, std::mt19937* MT) {
+                                                 ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:79:67: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static float getRandomFloat(float from, float to, std::mt19937* MT) {
+                                                                   ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:93:37: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+                              t_start)
+                                     ^
+In file included from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\agent.hpp:5:0,
+                 from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\mcp.hpp:6,
+                 from D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\src\mcp.cpp:1:
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:12:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:19:66: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& where, const std::string& msg)
+                                                                  ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:26:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void warn(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:67:59: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int from, int to, std::mt19937* MT) {
+                                                           ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:73:49: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int to, std::mt19937* MT) {
+                                                 ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:79:67: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static float getRandomFloat(float from, float to, std::mt19937* MT) {
+                                                                   ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:93:37: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+                              t_start)
+                                     ^
+In file included from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\agent.hpp:5:0,
+                 from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\problem.hpp:7,
+                 from D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\src\problem.cpp:1:
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:12:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:19:66: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& where, const std::string& msg)
+                                                                  ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:26:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void warn(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:67:59: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int from, int to, std::mt19937* MT) {
+                                                           ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:73:49: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int to, std::mt19937* MT) {
+                                                 ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:79:67: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static float getRandomFloat(float from, float to, std::mt19937* MT) {
+                                                                   ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:93:37: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+                              t_start)
+                                     ^
+In file included from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\agent.hpp:5:0,
+                 from d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\stn.hpp:13,
+                 from D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\src\stn.cpp:1:
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:12:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:19:66: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& where, const std::string& msg)
+                                                                  ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:26:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void warn(const std::string& msg)
+                                        ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:67:59: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int from, int to, std::mt19937* MT) {
+                                                           ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:73:49: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int to, std::mt19937* MT) {
+                                                 ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:79:67: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static float getRandomFloat(float from, float to, std::mt19937* MT) {
+                                                                   ^
+d:\multi agent path finding\mapf\external\time-independent-planning\time_independent\include\util.hpp:93:37: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+                              t_start)
+                                     ^
+In file included from D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\include/agent.hpp:5:0,
+                 from D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\include/causal_pibt.hpp:6,
+                 from D:\Multi Agent Path Finding\mapf\external\time-independent-planning\app.cpp:6:
+D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\include/util.hpp:12:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& msg)
+                                        ^
+D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\include/util.hpp:19:66: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void halt(const std::string& where, const std::string& msg)
+                                                                  ^
+D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\include/util.hpp:26:40: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static void warn(const std::string& msg)
+                                        ^
+D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\include/util.hpp:67:59: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int from, int to, std::mt19937* MT) {
+                                                           ^
+D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\include/util.hpp:73:49: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static int getRandomInt(int to, std::mt19937* MT) {
+                                                 ^
+D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\include/util.hpp:79:67: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+ static float getRandomFloat(float from, float to, std::mt19937* MT) {
+                                                                   ^
+D:\Multi Agent Path Finding\mapf\external\time-independent-planning\time_independent\include/util.hpp:93:37: warning: 'maybe_unused' attribute directive ignored [-Wattributes]
+                              t_start)
+                                     ^

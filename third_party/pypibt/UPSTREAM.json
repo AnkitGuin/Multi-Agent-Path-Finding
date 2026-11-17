@@ -1,0 +1,18 @@
+{
+  "repository": "https://github.com/Kei18/pypibt",
+  "revision": "a3c97f60413c6619a29a5022969896bc54877edc",
+  "license": "MIT; LICENCE.txt included",
+  "modifications": "none",
+  "downloaded_working_tree_sha256": {
+    "__init__.py": "54022579100ed8ffb092f52fc57790100ab024d14222bbc3e99b1a2827ad5164",
+    "pibt.py": "6cc419cd2279e06d7236c5528ddb0cbbdbfe13ab04b55287c59e2b5559e4bcf7",
+    "dist_table.py": "cbe665bd0d2ea4405057e8c00d2ebe46e85655b2b0f54bb9c04a115f8facc70f",
+    "mapf_utils.py": "9dc043ab24c0286646adff2072583c97601e9d893d777dabfc92f1062ef4684d"
+  },
+  "files_lf_sha256": {
+    "__init__.py": "d695fa28a5aad8a7a82231a6180c8b1cd32541f46bada65a4d3185375d2882a3",
+    "pibt.py": "b0ee3993147a12ec714217734dc0f27543b75521e60ed92d4d0b2b492e9de774",
+    "dist_table.py": "512624fced2b778502ad90e7807fe5d66a2f92bd4bd151e88c8550c2332a847f",
+    "mapf_utils.py": "79ff17f83926ed6e5cf16d2974f64d64b58e4e2e93ac7f2c0359ed582295b68a"
+  }
+}

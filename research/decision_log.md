@@ -64,3 +64,49 @@ Committed foundation as abb7170, then checked it in a detached clean worktree
 using the pinned existing environment. All 197 tests passed in 2.49 s; six
 analytic replays and six figures regenerated. Added clean-checkout XML/report
 as a documentation-only follow-up. The full research roadmap remains incomplete.
+
+## 2026-11-17 — Complete legacy recertification and preserve history
+
+Reran all 1,380 configured jobs into results/recertified_2026_11_17. Zero invalid
+plans; 1,320 historical status/SOC pairs matched, 60 differed. Timeouts remain
+host/budget dependent, and the development study overlapped the final legacy
+suite. Historical reports/raw data/figures are unchanged, verified by hashes.
+
+## 2026-11-17 — Reproduce authentic native references with honest model labels
+
+Vendored four unmodified MIT-licensed author's Python PIBT modules at pinned
+revision and preserved license/hashes. Eight upstream tests and 20 native runs
+passed; 41 goal departures demonstrate the native semantics mismatch. Built
+original Causal-PIBT with directory-only macro header and ran 20 checked native
+traces. Do not treat its atomic shared-state interactions as packet loss.
+LSRP build failed under GCC 6.3 and its README license wording conflicts; source
+stays ignored and no LSRP run is claimed. Removed unused optional visualizer
+checkout; retain only required downloaded baseline sources locally.
+
+## 2026-11-17 — Study a standard protocol before claiming a new method
+
+Implemented local optimistic A*, explicit epoch claims/promises/release/ACK,
+goal message service and remembered contact retries. Exact sensing >=2 hops is
+a named assumption. Promise expiry never grants clearance. Static priority
+without backtracking can stall; no liveness theorem. Added periodic/always/
+selective/no-map/full-replan controls with identical ownership. This is a
+descriptive adaptation/control study, not an approved new algorithm claim.
+
+## 2026-11-17 — Correct sensor metadata and rerun before publication
+
+Final review found waits labeled moving in VisibleAgent. The controllers do not
+use that flag, but authoritative observations must be correct. Fixed it, added
+a regression and advanced the model label to v0.2.1. Preserved the initial full
+development run locally under ignored external/superseded_study_2026_11_17;
+the corrected complete rerun is the repository's primary development evidence.
+Do not silently rewrite old events. Portable LF hashes accompany source-byte
+hashes and run IDs include model/baseline versions.
+
+## 2026-11-17 — Preserve negative/inconclusive findings; keep holdout closed
+
+Development study: seven families, ten seeds, three fault settings, seven
+controllers; all 1,470 outcomes and compressed replays retained. Native reference
+data stay separate. Selective-report savings alone are not novel, waiting/time
+differences against periodic reporting are inconclusive, and completion is low.
+Do not tune into the reserved holdout or write a positive-results manuscript.
+Next research must address progress recovery and strong matched baselines.
