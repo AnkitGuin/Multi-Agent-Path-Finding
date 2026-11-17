@@ -110,3 +110,12 @@ data stay separate. Selective-report savings alone are not novel, waiting/time
 differences against periodic reporting are inconclusive, and completion is low.
 Do not tune into the reserved holdout or write a positive-results manuscript.
 Next research must address progress recovery and strong matched baselines.
+
+## 2026-11-17 — Verify the committed study before pushing
+
+Clean checkout of 9fdd2c2 passed all 275 tests in 8.56 s and six fresh analytic
+cases. Every one of the 1,470 stored study replays validated again; regenerated
+analysis matched the committed analysis exactly. All recorded LF source hashes
+matched the checkout. Added verification evidence only in a follow-up commit.
+The original 96 result/table/figure files, dashboard edit and sealed holdout
+specification remain unchanged. Publication gates remain unpassed.
